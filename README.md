@@ -2,7 +2,7 @@
 
 In this repo, I will evaluate any architectural violations in the following open-source GitHub project:
 
-" **Zeeguu/API:** [Link](https://github.com/zeeguu/api)
+> **Zeeguu/API:** [Link](https://github.com/zeeguu/api)
 
 I will do so by examining the implementation and reconstructing the as-implemented architecture -- recovering one or more architectural views. This is part of software reverse engineering where we obtain a documented architecture.
 
