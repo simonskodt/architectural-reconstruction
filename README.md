@@ -3,7 +3,7 @@
 > [!IMPORTANT]  
 > My main Jupyter Notebook file contains all the work done for architectural reconstruction: [reconstruction.ipynb](https://github.com/simonskodt/architectural-reconstruction/blob/main/reconstruction/reconstruction.ipynb)
 
-In this repository, I will evaluate any architectural violations in the following open-source GitHub project:
+In this repository, I will <mark>evaluate any architectural violations and do architectural recontruction</mark> for the following open-source GitHub project:
 
 - [Zeeguu/API](https://github.com/zeeguu/api): API for tracking a learner's progress when reading materials in a foreign language and recommending further personalized exercises and readings.
 - [Website](https://www.zeeguu.org/): Functionality and timeline.
