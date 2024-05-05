@@ -1,12 +1,12 @@
 # Architectural Reconstruction
 
+> [!IMPORTANT]  
+> My main Jupyter Notebook file contains all the work done for architectural reconstruction: [reconstruction.ipynb](https://github.com/simonskodt/architectural-reconstruction/blob/main/reconstruction/reconstruction.ipynb)
+
 In this repository, I will evaluate any architectural violations in the following open-source GitHub project:
 
 - [Zeeguu/API](https://github.com/zeeguu/api): API for tracking a learner's progress when reading materials in a foreign language and recommending further personalized exercises and readings.
 - [Website](https://www.zeeguu.org/): Functionality and timeline.
-
-> [!IMPORTANT]  
-> My main Jupyter Notebook file contains all the work done for architectural reconstruction: [reconstruction.ipynb](https://github.com/simonskodt/architectural-reconstruction/blob/main/reconstruction/reconstruction.ipynb)
 
 I will do so by examining the implementation and reconstructing the as-implemented architecture -- recovering one or more architectural views. This is part of software reverse engineering where we obtain a documented architecture.
 
