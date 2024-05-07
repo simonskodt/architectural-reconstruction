@@ -1,0 +1,2226 @@
+Test results:
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-605 (https://cwe.mitre.org/data/definitions/605.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b104_hardcoded_bind_all_interfaces.html
+   Location: ./start.py:23:40
+22	application.run(
+23	    host=application.config.get("HOST", "0.0.0.0"),
+24	    port=application.config.get("PORT", 9001),
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b605_start_process_with_a_shell.html
+   Location: ./tools/activity_monitor.py:43:4
+42	    db_session.commit()
+43	    os.system("cls" if os.name == "nt" else "clear")
+44	    # print(chr(27) + "[2J")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./tools/old/assert_db_anonymized.py:14:0
+13	
+14	assert "mir.lu" not in u.email
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./tools/update_article_content.py:35:29
+34	            update_article(each.id)
+35	            sleep_interval = randint(10, 30)
+36	            print(f"sleeping...{sleep_interval}")
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: ''
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b105_hardcoded_password_string.html
+   Location: ./zeeguu/api/endpoints/sessions.py:22:19
+21	    password = request.form.get("password", None)
+22	    if password == "":
+23	        return make_error(401, "Password not given")
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: ./zeeguu/api/endpoints/speech.py:127:8
+126	
+127	    m = hashlib.md5()
+128	    m.update(full_article_text.encode("utf-8"))
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'test'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b106_hardcoded_password_funcarg.html
+   Location: ./zeeguu/api/test/fixtures.py:85:25
+84	        # Creating a user and returning also the session
+85	        test_user_data = dict(
+86	            password="test", username="test", learned_language="de"
+87	        )
+88	        self.email = "i@mir.lu"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/fixtures.py:90:8
+89	        response = self.client.post(f"/add_user/{self.email}", data=test_user_data)
+90	        assert response.status_code == 200
+91	
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'test'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b105_hardcoded_password_string.html
+   Location: ./zeeguu/api/test/test_account_creation.py:5:12
+4	
+5	TEST_PASS = "test"
+6	TEST_EMAIL = "i@mir.lu"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_account_creation.py:14:4
+13	    response = client.post(f"/add_user/{TEST_EMAIL}", data=test_user_data)
+14	    assert int(response.data)
+15	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_account_creation.py:20:4
+19	    response = client.post(f"/add_user/{TEST_EMAIL}", data=test_user_data)
+20	    assert int(response.data)
+21	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_account_creation.py:23:4
+22	    response = client.post(f"/add_user/{TEST_EMAIL}", data=test_user_data)
+23	    assert response.status_code == 400
+24	    data = json.loads(response.data)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_account_creation.py:25:4
+24	    data = json.loads(response.data)
+25	    assert "There is already an account for this email" in data["message"]
+26	
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: '2sh'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b106_hardcoded_password_funcarg.html
+   Location: ./zeeguu/api/test/test_account_creation.py:29:16
+28	def test_create_user_returns_400_if_password_too_short(client):
+29	    form_data = dict(username="gigi", password="2sh", invite_code="test")
+30	    response = client.post("/add_user/i@i.la", data=form_data)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_account_creation.py:31:4
+30	    response = client.post("/add_user/i@i.la", data=form_data)
+31	    assert response.status_code == 400
+32	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_account_creation.py:37:4
+36	    response = client.post("/add_user/i@i.la", data=form_data)
+37	    assert response.status_code == 400
+38	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_account_creation.py:43:4
+42	    response = client.post("/add_user/i@i.la", data=form_data)
+43	    assert response.status_code == 400
+44	
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'updated'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b106_hardcoded_password_funcarg.html
+   Location: ./zeeguu/api/test/test_account_creation.py:53:16
+52	
+53	    form_data = dict(code=code, password="updated")
+54	    rv = client.post("/reset_password/" + TEST_EMAIL, data=form_data)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_account_creation.py:55:4
+54	    rv = client.post("/reset_password/" + TEST_EMAIL, data=form_data)
+55	    assert rv.status_code == 200
+56	
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'updated'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b106_hardcoded_password_funcarg.html
+   Location: ./zeeguu/api/test/test_account_creation.py:65:16
+64	
+65	    form_data = dict(code=code, password="updated")
+66	    rv = client.post("/reset_password/" + TEST_EMAIL, data=form_data)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_account_creation.py:67:4
+66	    rv = client.post("/reset_password/" + TEST_EMAIL, data=form_data)
+67	    assert rv.status_code == 200
+68	
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'updated'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b106_hardcoded_password_funcarg.html
+   Location: ./zeeguu/api/test/test_account_creation.py:69:16
+68	
+69	    form_data = dict(password="updated")
+70	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_account_creation.py:73:4
+72	
+73	    assert rv.status_code == 200
+74	
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'updated'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b106_hardcoded_password_funcarg.html
+   Location: ./zeeguu/api/test/test_account_creation.py:84:16
+83	    # invalid_code
+84	    form_data = dict(code="thiswontwork", password="updated")
+85	    rv = client.post("/reset_password/" + TEST_EMAIL, data=form_data)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_account_creation.py:86:4
+85	    rv = client.post("/reset_password/" + TEST_EMAIL, data=form_data)
+86	    assert rv.status_code == 400
+87	
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: '2sh'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b106_hardcoded_password_funcarg.html
+   Location: ./zeeguu/api/test/test_account_creation.py:89:16
+88	    # password too short
+89	    form_data = dict(code=code, password="2sh")
+90	    rv = client.post("/reset_password/" + TEST_EMAIL, data=form_data)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_account_creation.py:91:4
+90	    rv = client.post("/reset_password/" + TEST_EMAIL, data=form_data)
+91	    assert rv.status_code == 400
+92	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_article.py:8:4
+7	
+8	    assert response_data
+9	    assert response_data["id"] == 1
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_article.py:9:4
+8	    assert response_data
+9	    assert response_data["id"] == 1
+10	    assert "Venezuela" in response_data["title"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_article.py:10:4
+9	    assert response_data["id"] == 1
+10	    assert "Venezuela" in response_data["title"]
+11	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_article.py:16:4
+15	    result = client.get(f"/user_articles/starred_or_liked")
+16	    assert len(result) == 0
+17	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_article.py:24:4
+23	    result = client.get(f"/user_articles/starred_or_liked")
+24	    assert len(result) == 1
+25	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_article.py:31:4
+30	    result = client.get(f"/user_articles/starred_or_liked")
+31	    assert len(result) == 1
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmark.py:9:4
+8	    bookmarks = _get_bookmarks_by_day(client)
+9	    assert bookmarks is not []
+10	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmark.py:17:4
+16	    bookmarks_on_first_day = bookmarks[0]["bookmarks"]
+17	    assert bookmark_id == bookmarks_on_first_day[0]["id"]
+18	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmark.py:40:4
+39	    bookmark = _first_bookmark_on_day1(all_bookmarks)
+40	    assert ("companion" in str(bookmark))
+41	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmark.py:64:4
+63	    bookmark = _first_bookmark_on_day1(all_bookmarks)
+64	    assert ("companion" in str(bookmark))
+65	    assert ("a new context" in str(bookmark))
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmark.py:65:4
+64	    assert ("companion" in str(bookmark))
+65	    assert ("a new context" in str(bookmark))
+66	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmark.py:73:4
+72	    top_bookmarks = client.get("/top_bookmarks/10")
+73	    assert top_bookmarks is not []
+74	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmark.py:81:4
+80	    day1_bookmarks = _bookmarks_on_day1(all_bookmarks)
+81	    assert day1_bookmarks["date"]
+82	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmark.py:85:8
+84	    for key in ["from", "to", "id", "context", "title", "url"]:
+85	        assert key in some_bookmark
+86	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmark.py:91:4
+90	
+91	    assert "context" not in bookmark1
+92	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmark.py:105:4
+104	    # If we don't ask for the context, we don't get it
+105	    assert "context" not in bookmarks[0]["bookmarks"][0]
+106	    # Also, since we didn't pass any after_date we get all the three days
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmark.py:107:4
+106	    # Also, since we didn't pass any after_date we get all the three days
+107	    assert len(bookmarks) == 1
+108	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmark.py:112:4
+111	    bookmarks = client.post("/bookmarks_by_day", data=form_data)
+112	    assert bookmarks is not []
+113	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmarks.py:15:4
+14	    )
+15	    assert new_bookmark
+16	    new_bookmark_id = new_bookmark["bookmark_id"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmarks.py:19:4
+18	    bookmarks_by_day = client.get("/bookmarks_by_day/with_context")
+19	    assert len(bookmarks_by_day) == 1
+20	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_bookmarks.py:22:4
+21	    response = client.post(f"/delete_bookmark/{new_bookmark_id}")
+22	    assert response == b"OK"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_endpoint_names.py:22:12
+21	        if name.endswith("/"):
+22	            assert False, f"{name}: Endpoint names should not end in /"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_exercise_session.py:10:4
+9	    new_exercise_session = client.post("/exercise_session_start")
+10	    assert new_exercise_session
+11	    assert new_exercise_session["id"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_exercise_session.py:11:4
+10	    assert new_exercise_session
+11	    assert new_exercise_session["id"]
+12	    return new_exercise_session["id"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_exercise_session.py:18:4
+17	    session_id = test_start_new_exercise_session(client)
+18	    assert bookmark_id
+19	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_exercise_session.py:29:4
+28	    new_exercise = client.post("/report_exercise_outcome", data=data)
+29	    assert b"OK" == new_exercise
+30	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_exercise_session.py:34:4
+33	    session_info = client.get(f"/exercise_session_info/{session_id}")
+34	    assert session_info["duration"] == 2000
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_reading_session.py:6:4
+5	    new_reading_session = client.post("/reading_session_start", data=dict(article_id=1))
+6	    assert new_reading_session
+7	    assert new_reading_session["id"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_reading_session.py:7:4
+6	    assert new_reading_session
+7	    assert new_reading_session["id"]
+8	    return new_reading_session["id"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_reading_session.py:17:4
+16	    session_info = client.get(f"/reading_session_info/{session_id}")
+17	    assert session_info["duration"] == 2000
+18	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_reading_session.py:25:4
+24	
+25	    assert result == b"OK"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_teacher_dashboard.py:6:4
+5	    result = client.get(f"/is_teacher")
+6	    assert result == b"True"
+7	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_teacher_dashboard.py:11:4
+10	    result = client.post("/create_own_cohort", data=FRENCH_B1_COHORT)
+11	    assert result.decode('utf-8') == 'OK'
+12	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_teacher_dashboard.py:18:4
+17	    response = client.response_from_post("/create_own_cohort", data=FRENCH_B1_COHORT)
+18	    assert response.status_code == 400
+19	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_teacher_dashboard.py:29:4
+28	    print(users)
+29	    assert users is not []
+30	    assert users[0]["email"] == STUDENT_DATA["email"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_teacher_dashboard.py:30:4
+29	    assert users is not []
+30	    assert users[0]["email"] == STUDENT_DATA["email"]
+31	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_teacher_dashboard.py:36:4
+35	    cohorts = client.get("/cohorts_info")
+36	    assert cohorts[0]["name"] == FRENCH_B1_COHORT["name"]
+37	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_teacher_dashboard.py:43:4
+42	    resp = client.response_from_post("/remove_cohort/1")
+43	    assert resp.status_code == 200
+44	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_teacher_dashboard.py:46:4
+45	    resp = client.response_from_post("/remove_cohort/1")
+46	    assert resp.status_code == 401
+47	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_teacher_dashboard.py:62:4
+61	    cohorts = client.get("/cohorts_info")
+62	    assert cohorts is not []
+63	
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'test'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b106_hardcoded_password_funcarg.html
+   Location: ./zeeguu/api/test/test_teacher_dashboard.py:70:19
+69	    # Create a student user and log them in
+70	    student_data = dict(
+71	        password="test", username="test", learned_language="fr"
+72	    )
+73	    email = "student@mir.lu"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_teacher_dashboard.py:79:4
+78	    response = client.client.get(f"/cohorts_info?session={student_session}")
+79	    assert response.status_code == 401
+80	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_user_article.py:11:4
+10	
+11	    assert "content" in article_info
+12	    assert "translations" in article_info
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_user_article.py:12:4
+11	    assert "content" in article_info
+12	    assert "translations" in article_info
+13	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_user_article.py:20:4
+19	    article_info = client.get(f"/user_article?article_id={article_id}")
+20	    assert not article_info["starred"]
+21	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_user_article.py:27:4
+26	    article_info = client.get(f"/user_article?article_id={article_id}")
+27	    assert article_info["starred"]
+28	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_user_article.py:34:4
+33	    article_info = client.get(f"/user_article?article_id={article_id}")
+34	    assert article_info["starred"]
+35	    assert article_info["liked"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_user_article.py:35:4
+34	    assert article_info["starred"]
+35	    assert article_info["liked"]
+36	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_user_article.py:42:4
+41	    article_info = client.get(f"/user_article?article_id={article_id}")
+42	    assert not article_info["starred"]
+43	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_user_data.py:6:4
+5	    result = client.get("/learned_language")
+6	    assert "de" == result.decode("utf-8")
+7	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_user_data.py:9:4
+8	    result = client.post("/learned_language/en")
+9	    assert "OK" == result.decode("utf-8")
+10	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/api/test/test_user_data.py:12:4
+11	    result = client.get("/learned_language")
+12	    assert "en" == result.decode("utf-8")
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: ./zeeguu/api/utils/feedparser_extensions.py:16:15
+15	        feed_data = []
+16	        page = urllib.request.urlopen(domain)
+17	        soup = BeautifulSoup(page, "lxml")
+
+--------------------------------------------------
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-605 (https://cwe.mitre.org/data/definitions/605.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b104_hardcoded_bind_all_interfaces.html
+   Location: ./zeeguu/config/loader.py:65:25
+64	def _load_api_testing_configuration(app):
+65	    app.config["HOST"] = "0.0.0.0"
+66	    app.config["DEBUG"] = False
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'lalala'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b105_hardcoded_password_string.html
+   Location: ./zeeguu/config/loader.py:67:15
+66	    app.config["DEBUG"] = False
+67	    app.config["SECRET_KEY"] = "lalala"
+68	
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Requests call without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b113_request_without_timeout.html
+   Location: ./zeeguu/core/content_retriever/article_downloader.py:38:15
+37	    # solve redirects and save the clean url
+38	    response = requests.get(url)
+39	    return response.url
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Requests call without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b113_request_without_timeout.html
+   Location: ./zeeguu/core/language/services/lingo_rank_service.py:5:10
+4	def retrieve_lingo_rank(text):
+5	    res = requests.get(
+6	        "https://www.wolframcloud.com/obj/929a0113-278c-479d-912a-54ef21b5e0bb",
+7	        params={"x": text},
+8	    )
+9	    # The damn thing returns a ton of digits
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/model/session.py:36:18
+35	        while True:
+36	            id_ = random.randint(0, zeeguu.core.app.config.get("MAX_SESSION"))
+37	            if cls.query.get(id_) is None:
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/model/unique_code.py:19:20
+18	    def __init__(self, email):
+19	        self.code = randint(100, 999)
+20	        self.email = email
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/model/url.py:121:35
+120	                        print("Exception of second degree in url..." + str(i) + str(e))
+121	                        time.sleep(random.randrange(1, 10) * 0.1)
+122	                        from sentry_sdk import capture_message
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/model/user.py:354:33
+353	        """
+354	        salt_bytes = "".join(chr(random.randint(0, 255)) for _ in range(32)).encode(
+355	            "utf-8"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/nlp_pipeline/automatic_gec_tagging.py:301:8
+300	                    labels.append(_include_start_end(f"R:{ref_pos_converted}", start_err, end_err, include_o_start_end))
+301	        assert len(labels) == len(corrections), f"{len(labels)} <> {len(corrections)}"
+302	        results = {}
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/nlp_pipeline/automatic_gec_tagging.py:308:12
+307	                merge_labels, corrections = self._merge_missing(labels, include_o_start_end, corrections)
+308	            assert len(error) == len(merge_labels), f"Length of ERR tokens vs merge labels does not match. {len(error)} vs {len(merge_labels)}"
+309	            results["unmerged_labels"] = labels
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/nlp_pipeline/automatic_gec_tagging.py:328:8
+327	        if type(word_dictionary_list) is str: word_dictionary_list = json.loads(word_dictionary_list)
+328	        assert type(word_dictionary_list) is list, f"Input in the wrong format, it needs to be a list of JSON or a JSON string. Found: {type(word_dictionary_list)}"
+329	        def _write_feedback(op, word, word_i, err_last_i, is_missing_before=None,
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/nlp_pipeline/automatic_gec_tagging.py:470:8
+469	        # Annotate the Feedback
+470	        assert len(word_dictionary_list) == len(err_w), "Input words and corrected words do not match."
+471	        for i, ((operation, (s_err,s_end))) in enumerate(annotated_errors["labels"]):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/nlp_pipeline/spacy_wrapper.py:51:8
+50	    def __init__(self, language_to_use, use_tranf=False, use_wv=True, use_large=False):
+51	        assert (
+52	            language_to_use in SPACY_LANGUAGE_DICTIONARY
+53	        ), f"Language not found, ensure you use one of the following: {list(SPACY_LANGUAGE_DICTIONARY.keys())}, you used '{language_to_use}'."
+54	        assert (
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/nlp_pipeline/spacy_wrapper.py:54:8
+53	        ), f"Language not found, ensure you use one of the following: {list(SPACY_LANGUAGE_DICTIONARY.keys())}, you used '{language_to_use}'."
+54	        assert (
+55	            (use_tranf == (not use_wv))
+56	            or ((not use_tranf) == use_tranf)
+57	            or (not use_tranf and not use_wv)
+58	        ), f"use_transf and use_wv cannot be used together. Set one of them to false."
+59	        if use_tranf:
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/rules/article_rule.py:35:55
+34	        summary = self.faker.text()
+35	        published = datetime.now() - timedelta(minutes=randint(0, 7200))
+36	        feed = FeedRule().feed
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/rules/bookmark_rule.py:51:57
+50	
+51	            random_origin_word = self.faker.word() + str(random.random())
+52	            random_origin_language = user.learned_language
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/rules/bookmark_rule.py:54:62
+53	
+54	            random_translation_word = self.faker.word() + str(random.random())
+55	            random_translation_language = LanguageRule().random
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/rules/bookmark_rule.py:97:23
+96	        word_list = re.sub(r"[^\w]", " ", sentence).split()
+97	        random_index = random.randint(0, len(word_list) - 1)
+98	        return word_list[random_index]
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/rules/exercise_rule.py:25:23
+24	        random_source = SourceRule().random
+25	        random_speed = random.randint(500, 5000)
+26	        random_time = self.faker.date_time_this_year()
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/rules/feed_rule.py:78:54
+77	    def _create_model_object(self):
+78	        title = " ".join(self.faker.text().split()[: (randint(1, 10))])
+79	        description = " ".join(self.faker.text().split()[: (randint(5, 20))])
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/rules/feed_rule.py:79:60
+78	        title = " ".join(self.faker.text().split()[: (randint(1, 10))])
+79	        description = " ".join(self.faker.text().split()[: (randint(5, 20))])
+80	        language = LanguageRule().random
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/rules/language_rule.py:93:24
+92	    def random(self):
+93	        random_id, __ = random.choice(list(self.languages.items()))
+94	        return self.get_or_create_language(random_id)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/rules/outcome_rule.py:66:25
+65	    def random(self):
+66	        random_outcome = random.choice(self.outcomes)
+67	        return self.__get_or_create_outcome(random_outcome)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/rules/source_rule.py:58:24
+57	    def random(self):
+58	        random_source = random.choice(self.sources)
+59	        return self.__get_or_create_source(random_source)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/rules/user_exercise_session_rule.py:31:56
+30	
+31	        start_time = datetime.now() - timedelta(minutes=randint(0, 7200))
+32	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/rules/user_reading_session_rule.py:27:56
+26	        article = ArticleRule().article
+27	        start_time = datetime.now() - timedelta(minutes=randint(0, 7200))
+28	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_article.py:25:8
+24	    def test_articles_are_different(self):
+25	        assert self.article1.title != self.article2.title
+26	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_article.py:28:8
+27	    def test_article_representation_does_not_error(self):
+28	        assert self.article1.article_info()
+29	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_article.py:35:8
+34	        self.article1.add_topic(sports)
+35	        assert len(self.article1.topics) == 2
+36	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_article.py:39:8
+38	        self.new_art = Article.find_or_create(session, URL_SPIEGEL_VENEZUELA)
+39	        assert self.new_art.fk_difficulty
+40	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_article.py:43:8
+42	        art = Article.find_or_create(session, URL_CNN_KATHMANDU)
+43	        assert art
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/test_bookmark.py:28:37
+27	        self.user_rule = UserRule()
+28	        self.user_rule.add_bookmarks(random.randint(3, 5))
+29	        self.user = self.user_rule.user
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:32:8
+31	    def test_user_has_bookmarks(self):
+32	        assert self.user.has_bookmarks()
+33	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:47:8
+46	        length_new_exercise_log = len(random_bookmark.exercise_log)
+47	        assert length_original_exercise_log < length_new_exercise_log
+48	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:53:8
+52	
+53	        assert self.user.bookmarks_to_study() is not None
+54	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:57:8
+56	        random_bookmark = BookmarkRule(self.user).bookmark
+57	        assert random_bookmark.translation is not None
+58	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:65:8
+64	        # combo of user/article will always result in one bookmark
+65	        assert 1 == len(Bookmark.find_all_for_user_and_article(self.user, article))
+66	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:72:8
+71	
+72	        assert random_bookmark.content_is_not_too_long()
+73	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:86:8
+85	
+86	        assert latest_exercise.source == random_exercise.source
+87	        assert latest_exercise.outcome == random_exercise.outcome
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:87:8
+86	        assert latest_exercise.source == random_exercise.source
+87	        assert latest_exercise.outcome == random_exercise.outcome
+88	        assert latest_exercise.solving_speed == random_exercise.solving_speed
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:88:8
+87	        assert latest_exercise.outcome == random_exercise.outcome
+88	        assert latest_exercise.solving_speed == random_exercise.solving_speed
+89	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:91:8
+90	    def test_user_bookmark_count(self):
+91	        assert len(self.user.all_bookmarks()) > 0
+92	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:94:8
+93	    def test_bookmark_is_serializable(self):
+94	        assert self.user.all_bookmarks()[0].json_serializable_dict()
+95	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:104:12
+103	        for b in random_bookmarks:
+104	            assert bad_quality_bookmark(b)
+105	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:118:12
+117	        for b in random_bookmarks:
+118	            assert b.fit_for_study
+119	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/test_bookmark.py:129:12
+128	            OutcomeRule().random,
+129	            random.randint(100, 1000),
+130	            exercise_session.id,
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:135:8
+134	
+135	        assert exercise_count_after > exercise_count_before
+136	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:142:12
+141	        for b in list_should_be:
+142	            assert b in list_to_check
+143	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:149:12
+148	        for b in list_should_be:
+149	            assert b in list_to_check
+150	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:157:8
+156	
+157	        assert bookmark_should_be in bookmark_to_check
+158	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:163:8
+162	
+163	        assert bookmark_to_check == bookmark_should_be
+164	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:171:8
+170	
+171	        assert bookmark_should_be in bookmark_to_check
+172	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:179:8
+178	
+179	        assert bookmark_to_check == bookmark_should_be
+180	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:184:8
+183	
+184	        assert Bookmark.exists(random_bookmark)
+185	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:189:8
+188	        exercise_log = SortedExerciseLog(random_bookmark)
+189	        assert exercise_log.latest_exercise_outcome() is None
+190	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:196:8
+195	
+196	        assert (
+197	            random_exercise.outcome
+198	            == SortedExerciseLog(random_bookmark).latest_exercise_outcome()
+199	        )
+200	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:208:8
+207	        )
+208	        assert not learned
+209	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:221:8
+220	        result_time = SortedExerciseLog(random_bookmarks[1]).last_exercise_time()
+221	        assert learned and result_time == random_exercise.time
+222	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:227:8
+226	        )
+227	        assert learned
+228	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:249:8
+248	        result_time = log.last_exercise_time()
+249	        assert learned
+250	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:253:8
+252	        learned_time_from_log = log.last_exercise_time()
+253	        assert result_time == learned_time_from_log
+254	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:262:8
+261	        learned = is_learned_based_on_exercise_outcomes(log)
+262	        assert not learned
+263	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_bookmark.py:265:8
+264	    def test_top_bookmarks(self):
+265	        assert top_bookmarks(self.user)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/test_domain.py:19:37
+18	        self.user_rule = UserRule()
+19	        self.user_rule.add_bookmarks(random.randint(1, 5))
+20	        self.user = self.user_rule.user
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_domain.py:35:8
+34	
+35	        assert domain_to_check == domain_should_be, (
+36	                domain_should_be + " should be " + domain_to_check
+37	        )
+38	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/test_domain.py:48:21
+47	        # Create a random number of URLs, each with the same DomainName
+48	        random_num = random.randint(0, 10)
+49	        for _ in range(0, random_num):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_domain.py:56:12
+55	        try:
+56	            assert DomainName.find(domain_for_query)
+57	        except NoResultFound:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_domain.py:58:12
+57	        except NoResultFound:
+58	            assert False, "No domains found in database"
+59	        except MultipleResultsFound:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_domain.py:60:12
+59	        except MultipleResultsFound:
+60	            assert False, "There were multiple DomainNames in the database"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_feed.py:22:8
+21	    def test_feed_items(self):
+22	        assert len(self.spiegel.get_articles()) == 2
+23	        assert len(self.spiegel.get_articles(limit=2)) == 2
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_feed.py:23:8
+22	        assert len(self.spiegel.get_articles()) == 2
+23	        assert len(self.spiegel.get_articles(limit=2)) == 2
+24	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_feed.py:27:8
+26	        print("ID : ", self.newspaper_da.id)
+27	        assert len(self.newspaper_da.get_articles()) > 0
+28	        assert len(self.newspaper_da.get_articles(limit=2)) == 2
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_feed.py:28:8
+27	        assert len(self.newspaper_da.get_articles()) > 0
+28	        assert len(self.newspaper_da.get_articles(limit=2)) == 2
+29	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_feed.py:31:8
+30	    def test_feed_type(self):
+31	        assert self.spiegel.feed_type == FEED_TYPE["rss"]
+32	        assert self.newspaper_da.feed_type == FEED_TYPE["newspaper"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_feed.py:32:8
+31	        assert self.spiegel.feed_type == FEED_TYPE["rss"]
+32	        assert self.newspaper_da.feed_type == FEED_TYPE["newspaper"]
+33	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_feed.py:36:8
+35	        tomorrow = datetime.now() + timedelta(days=1)
+36	        assert not self.spiegel.get_articles(after_date=tomorrow)
+37	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_feed.py:41:8
+40	        print(self.spiegel.get_articles(easiest_first=True))
+41	        assert (
+42	            ordered_by_difficulty[0].fk_difficulty
+43	            <= ordered_by_difficulty[1].fk_difficulty
+44	        )
+45	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_feed.py:47:8
+46	        ordered_by_time = self.spiegel.get_articles(most_recent_first=True)
+47	        assert ordered_by_time[0].published_time >= ordered_by_time[1].published_time
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_language.py:25:12
+24	        except NoResultFound:
+25	            assert False, "No Language found in database"
+26	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_language.py:27:8
+26	
+27	        assert (
+28	            language_should_be.code == language_to_check.code
+29	            and language_should_be.name == language_to_check.name
+30	        )
+31	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_language.py:36:12
+35	        for lan in languages:
+36	            assert LanguageRule.get_or_create_language(lan)
+37	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_language.py:42:8
+41	        self.user.set_learned_language(language_should_be.code, db_session)
+42	        assert self.user.learned_language.id == language_should_be.id
+43	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_language.py:48:8
+47	        self.user.set_native_language(language_should_be.code)
+48	        assert self.user.native_language.id == language_should_be.id
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_localized_topic.py:50:8
+49	
+50	        assert localized_topic.matches_article(article)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_retrieve_and_compute.py:29:8
+28	
+29	        assert len(articles) == 2
+30	        assert articles[0].fk_difficulty
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_retrieve_and_compute.py:30:8
+29	        assert len(articles) == 2
+30	        assert articles[0].fk_difficulty
+31	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_retrieve_and_compute.py:45:8
+44	
+45	        assert topic in article.topics
+46	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_retrieve_and_compute.py:52:8
+51	
+52	        assert sufficient_quality(art)
+53	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_retrieve_and_compute.py:60:8
+59	        is_quality, _ = sufficient_quality(art)
+60	        assert not is_quality
+61	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_retrieve_and_compute.py:68:8
+67	        is_quality, _ = sufficient_quality(art)
+68	        assert not is_quality
+69	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_retrieve_and_compute.py:76:8
+75	        cleaned_up_text = cleanup_non_content_bits(art.text)
+76	        assert "Advertisement" not in cleaned_up_text
+77	    
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_retrieve_and_compute.py:82:8
+81	        is_quality, reason = sufficient_quality(db_content)
+82	        assert not is_quality
+83	        assert reason == "ML Prediction was 'Paywalled'."
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_retrieve_and_compute.py:83:8
+82	        assert not is_quality
+83	        assert reason == "ML Prediction was 'Paywalled'."
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:32:8
+31	
+32	        assert user_to_check.email == str(self.user.id) + User.ANONYMOUS_EMAIL_DOMAIN
+33	        assert user_to_check.name == str(self.user.id)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:33:8
+32	        assert user_to_check.email == str(self.user.id) + User.ANONYMOUS_EMAIL_DOMAIN
+33	        assert user_to_check.name == str(self.user.id)
+34	        assert user_to_check.learned_language == self.user.learned_language
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:34:8
+33	        assert user_to_check.name == str(self.user.id)
+34	        assert user_to_check.learned_language == self.user.learned_language
+35	        assert user_to_check.native_language == self.user.native_language
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:35:8
+34	        assert user_to_check.learned_language == self.user.learned_language
+35	        assert user_to_check.native_language == self.user.native_language
+36	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/test_user.py:39:60
+38	        random_bookmarks = [
+39	            BookmarkRule(self.user).bookmark for _ in range(random.randint(2, 5))
+40	        ]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:45:8
+44	
+45	        assert (
+46	            last_bookmark_time == random_bookmarks[-1].time
+47	        ), "{0} should be {1}".format(last_bookmark_time, random_bookmarks[-1].time)
+48	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:51:8
+50	        # User has no bookmarks, so he/she was not active recently
+51	        assert not self.user.active_during_recent()
+52	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:55:8
+54	        random_bookmark.time = datetime.now()
+55	        assert self.user.active_during_recent()
+56	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:59:8
+58	        random_email = self.faker.email()
+59	        assert User.validate_email("", random_email)
+60	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:63:8
+62	        random_password = self.faker.password()
+63	        assert User.validate_password("", random_password)
+64	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:67:8
+66	        random_name = self.faker.name()
+67	        assert User.validate_name("", random_name)
+68	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:73:8
+72	
+73	        assert password_before != password_after
+74	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/test_user.py:77:60
+76	        random_bookmarks = [
+77	            BookmarkRule(self.user).bookmark for _ in range(random.randint(2, 5))
+78	        ]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:81:8
+80	
+81	        assert all([b in bookmarks_retrieved for b in random_bookmarks])
+82	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/test_user.py:85:60
+84	        random_bookmarks = [
+85	            BookmarkRule(self.user).bookmark for _ in range(random.randint(2, 5))
+86	        ]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:91:8
+90	
+91	        assert self.user.bookmarks_chronologically() == random_bookmarks_ordered
+92	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/test_user.py:95:60
+94	        random_bookmarks = [
+95	            BookmarkRule(self.user).bookmark for _ in range(random.randint(2, 5))
+96	        ]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:105:12
+104	        for day, bookmarks in result_bookmarks.items():
+105	            assert len(bookmarks) == random_bookmarks_dates_count[day]
+106	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/test_user.py:109:23
+108	        date_bookmark_pair = []
+109	        for i in range(random.randint(5, 10)):
+110	            today_without_time = self.__truncate_time_from_date(today())
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/test_user.py:111:57
+110	            today_without_time = self.__truncate_time_from_date(today())
+111	            random_date = today_without_time - timedelta(random.randint(1, 364))
+112	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:126:12
+125	
+126	            assert result_date in date_bookmark_count_pair
+127	            assert result_count == date_bookmark_count_pair[result_date]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:127:12
+126	            assert result_date in date_bookmark_count_pair
+127	            assert result_count == date_bookmark_count_pair[result_date]
+128	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:130:8
+129	    def test_exists(self):
+130	        assert User.exists(self.user)
+131	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:137:8
+136	
+137	        assert result is not None and result == self.user
+138	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user.py:148:8
+147	
+148	        assert result is not None and result == anonymous_user
+149	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user_article.py:25:8
+24	    def test_article_is_not_starred_initially(self):
+25	        assert not self.user_article.starred
+26	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user_article.py:29:8
+28	        self.article.star_for_user(db_session, self.user)
+29	        assert 1 == len(UserArticle.all_starred_articles_of_user(self.user))
+30	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user_article.py:33:8
+32	        self.article.star_for_user(db_session, self.user)
+33	        assert 1 == len(UserArticle.all_starred_or_liked_articles_of_user(self.user))
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user_preferences.py:28:8
+27	    def test_no_preference_at_first(self):
+28	        assert not UserPreference.get_difficulty_estimator(self.user)
+29	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user_preferences.py:33:8
+32	        UserPreference.set_difficulty_estimator(db.session, self.user, "fk")
+33	        assert UserPreference.get_difficulty_estimator(self.user) == "fk"
+34	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user_preferences.py:39:8
+38	        difficulty = self.user.text_difficulty(self.text, self.english)
+39	        assert difficulty["discrete"] == "MEDIUM"
+40	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user_preferences.py:46:8
+45	        difficulty = self.user.text_difficulty(self.text, self.english)
+46	        assert difficulty["discrete"] == "EASY"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user_word.py:22:8
+21	        user_word = UserWord(random_word_stats[0], random_language)
+22	        assert user_word.importance_level() == int(random_word_stats[1].importance)
+23	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user_word.py:30:8
+29	
+30	        assert user_word_to_check == user_word_should_be
+31	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user_word.py:40:8
+39	
+40	        assert user_word_created == user_word_not_in_db
+41	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/test_user_word.py:44:52
+43	        list_random_user_words = [
+44	            UserWordRule().user_word for _ in range(random.randint(2, 5))
+45	        ]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user_word.py:48:8
+47	
+48	        assert all([word in list_retrieved for word in list_random_user_words])
+49	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/test_user_word.py:52:8
+51	        user_word_in_db = UserWordRule().user_word
+52	        assert UserWord.exists(user_word_in_db.word, user_word_in_db.language)
+53	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b311-random
+   Location: ./zeeguu/core/test/test_user_word.py:57:15
+56	        language_stats = load_language_from_hermit(random_language.code)
+57	        return random.choice(list(language_stats.word_info_dict.items()))
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/tests_difficulty_estimator_strategies/test_default_difficulty_estimator.py:22:8
+21	
+22	        assert d1['discrete'] == 'EASY'
+23	        assert d1['normalized'] == 0
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/tests_difficulty_estimator_strategies/test_default_difficulty_estimator.py:23:8
+22	        assert d1['discrete'] == 'EASY'
+23	        assert d1['normalized'] == 0
+24	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/tests_difficulty_estimator_strategies/test_default_difficulty_estimator.py:28:8
+27	
+28	        assert d1['discrete'] == 'EASY'
+29	        assert d1['normalized'] == 0
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/tests_difficulty_estimator_strategies/test_default_difficulty_estimator.py:29:8
+28	        assert d1['discrete'] == 'EASY'
+29	        assert d1['normalized'] == 0
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/tests_difficulty_estimator_strategies/test_frequency_difficulty_estimator.py:24:8
+23	
+24	        assert d1['discrete'] == 'EASY'
+25	        assert d1['normalized'] < 0.1
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b101_assert_used.html
+   Location: ./zeeguu/core/test/tests_difficulty_estimator_strategies/test_frequency_difficulty_estimator.py:25:8
+24	        assert d1['discrete'] == 'EASY'
+25	        assert d1['normalized'] < 0.1
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: ./zeeguu/core/util/hash.py:12:11
+11	        text = text.encode("utf8")
+12	    return sha1(text).hexdigest()
+13	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: ./zeeguu/core/util/hash.py:23:16
+22	    for i in range(1000):
+23	        hash_ = sha1(hash_ + salt).digest()
+24	    return hash_.hex()
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 15473
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 211
+		Medium: 5
+		High: 4
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 2
+		Medium: 13
+		High: 205
+Files skipped (0):

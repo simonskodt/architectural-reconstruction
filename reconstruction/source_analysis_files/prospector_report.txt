@@ -1183,8 +1183,6 @@ core/language/services/lingo_rank_service.py
     pylint: missing-timeout / Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely (col 10)
 
 core/language/strategies/cognacy_difficulty_estimator.py
-  Line: 1
-    pylint: import-error / Unable to import 'numpy'
   Line: 2
     pylint: import-error / Unable to import 'wordstats'
     pylint: unused-import / Unused WordInfo imported from wordstats
@@ -1220,8 +1218,6 @@ core/language/strategies/cognacy_difficulty_estimator.py
     pylint: trailing-newlines / Trailing newlines
 
 core/language/strategies/cognacy_wh_difficulty_estimator.py
-  Line: 1
-    pylint: import-error / Unable to import 'numpy'
   Line: 2
     pylint: import-error / Unable to import 'wordstats'
     pylint: unused-import / Unused WordInfo imported from wordstats
@@ -1273,8 +1269,6 @@ core/language/strategies/flesch_kincaid_difficulty_estimator.py
     pylint: import-error / Unable to import 'nltk'
   Line: 2
     pylint: import-error / Unable to import 'pyphen'
-  Line: 3
-    pylint: import-error / Unable to import 'numpy'
   Line: 23
     pyflakes: F821 / undefined name 'User' (col 73)
   Line: 36
@@ -1319,8 +1313,6 @@ core/language/strategies/frequency_difficulty_estimator.py
     pylint: trailing-newlines / Trailing newlines
 
 core/language/strategies/word_history_difficulty_estimator.py
-  Line: 1
-    pylint: import-error / Unable to import 'numpy'
   Line: 2
     pylint: import-error / Unable to import 'wordstats'
     pylint: unused-import / Unused WordInfo imported from wordstats
@@ -2340,8 +2332,6 @@ core/nlp_pipeline/alignment_errant.py
 core/nlp_pipeline/automatic_gec_tagging.py
   Line: 2
     pylint: import-error / Unable to import 'regex'
-  Line: 3
-    pylint: import-error / Unable to import 'numpy'
   Line: 5
     pylint: import-error / Unable to import 'rapidfuzz.fuzz'
   Line: 7
@@ -2407,8 +2397,6 @@ core/nlp_pipeline/automatic_gec_tagging.py
     pylint: simplifiable-if-expression / The if expression can be replaced with 'bool(test)' (col 35)
 
 core/nlp_pipeline/confusion_generator.py
-  Line: 1
-    pylint: import-error / Unable to import 'numpy'
   Line: 22
     pylint: dangerous-default-value / Dangerous default value NOISE_PROBABILITIES_DEFAULT (builtins.dict) as argument (col 4)
     pylint: too-many-arguments / Too many arguments (7/5) (col 4)
@@ -2447,8 +2435,6 @@ core/nlp_pipeline/edit_errant.py
     pylint: redefined-builtin / Redefining built-in 'type' (col 8)
 
 core/nlp_pipeline/reduce_context.py
-  Line: 2
-    pylint: import-error / Unable to import 'numpy'
   Line: 29
     pycodestyle: E741 / ambiguous variable name 'l' (col 36)
   Line: 53
@@ -2795,69 +2781,67 @@ core/util/timer_logging_decorator.py
 
 core/word_scheduling/adaptive/scheduling_algo.py
   Line: 1
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model.article -> zeeguu.core.model.user)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model.article -> zeeguu.core.model.user_article -> zeeguu.core.model.personal_copy)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model.cohort -> zeeguu.core.model.user)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.exercise_outcome)
     pylint: cyclic-import / Cyclic import (zeeguu.core.model.bookmark -> zeeguu.core.model.exercise)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.bookmark_quality -> zeeguu.core.bookmark_quality.negative_qualities -> zeeguu.core.model.bookmark -> zeeguu.core.bookmark_quality.fit_for_study)
     pylint: cyclic-import / Cyclic import (zeeguu.core.bookmark_quality -> zeeguu.core.bookmark_quality.top_bookmarks_for_user)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.elastic.indexing -> zeeguu.core.model.difficulty_lingo_rank -> zeeguu.core.model.article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model.article -> zeeguu.core.model.user_article -> zeeguu.core.model.personal_copy -> zeeguu.core.model.user)
     pylint: cyclic-import / Cyclic import (zeeguu.core.model.cohort -> zeeguu.core.model.teacher_cohort_map)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.word_scheduling.basicSR.basicSR)
-    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.speech)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model.personal_copy -> zeeguu.core.model.user -> zeeguu.core.model.user_article)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.elastic.indexing -> zeeguu.core.model.article)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.language.difficulty_estimator_factory -> zeeguu.core.language.strategies.default_difficulty_estimator -> zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.language.difficulty_estimator_factory -> zeeguu.core.language.strategies.default_difficulty_estimator -> zeeguu.core.language.difficulty_estimator_strategy -> zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.language.difficulty_estimator_factory -> zeeguu.core.language.strategies.flesch_kincaid_difficulty_estimator -> zeeguu.core.language.difficulty_estimator_strategy -> zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.bookmark_quality -> zeeguu.core.bookmark_quality.positive_qualities -> zeeguu.core.bookmark_quality.negative_qualities -> zeeguu.core.model.bookmark -> zeeguu.core.bookmark_quality.fit_for_study)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.language.difficulty_estimator_factory -> zeeguu.core.language.strategies.default_difficulty_estimator -> zeeguu.core.model -> zeeguu.core.model.cohort_article_map -> zeeguu.core.model.article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.user_reading_session)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.user_activitiy_data -> zeeguu.core.model.user_reading_session)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.word_scheduling.basicSR.basicSR)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.elastic.indexing -> zeeguu.core.model.difficulty_lingo_rank -> zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model.cohort -> zeeguu.core.model.user)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.difficulty_lingo_rank)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.reading_sessions)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.language.difficulty_estimator_factory -> zeeguu.core.language.strategies.default_difficulty_estimator -> zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.text -> zeeguu.core.model.url -> zeeguu.core.model.domain_name)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.exercise_source)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.text -> zeeguu.core.model.url)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user_word -> zeeguu.core.model.language)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model.article -> zeeguu.core.model.user_article -> zeeguu.core.model.personal_copy)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.language.difficulty_estimator_factory -> zeeguu.core.language.strategies.default_difficulty_estimator -> zeeguu.core.language.difficulty_estimator_strategy -> zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.language.difficulty_estimator_factory -> zeeguu.core.language.strategies.flesch_kincaid_difficulty_estimator -> zeeguu.core.language.difficulty_estimator_strategy -> zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.elastic.indexing -> zeeguu.core.model.difficulty_lingo_rank -> zeeguu.core.model -> zeeguu.core.model.article)
     pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.user_language)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.word_to_study)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.cohort -> zeeguu.core.model.teacher_cohort_map)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.exercise_outcome)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.word_to_study -> zeeguu.core.model.bookmark -> zeeguu.core.model.exercise_outcome)
     pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.user_article -> zeeguu.core.model.personal_copy -> zeeguu.core.model.article)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model.bookmark -> zeeguu.core.model.exercise -> zeeguu.core.model.user_exercise_session -> zeeguu.core.model.user)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.user_article -> zeeguu.core.model.article_difficulty_feedback)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.elastic.indexing -> zeeguu.core.model.difficulty_lingo_rank -> zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.user_article)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.exercise -> zeeguu.core.model.exercise_outcome)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.cohort -> zeeguu.core.model.teacher_cohort_map)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.user_article -> zeeguu.core.model.personal_copy)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model.article -> zeeguu.core.model.user)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.user_article -> zeeguu.core.model.article_difficulty_feedback)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.elastic.indexing -> zeeguu.core.model.article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.personal_copy)
     pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.cohort_article_map)
     pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.session)
     pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.search_filter)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.feed)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.user_preference)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.user_activitiy_data)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.user_reading_session)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.text)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.text)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.feed -> zeeguu.core.model.url)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.user_preference)
     pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.search_subscription)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.feed -> zeeguu.core.model.url)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.text -> zeeguu.core.model.user_word)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.exercise)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.feed -> zeeguu.core.model.language)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.topic)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.exercise -> zeeguu.core.model.user_exercise_session)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user_word)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.article -> zeeguu.core.model.user_article -> zeeguu.core.model.personal_copy -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.exercise_outcome)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model.personal_copy -> zeeguu.core.model.user -> zeeguu.core.model.user_article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.url)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.topic)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.user_exercise_session)
     pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.search_subscription -> zeeguu.core.model.search)
     pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.topic_subscription)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.exercise -> zeeguu.core.model.exercise_source)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.feed -> zeeguu.core.model.url -> zeeguu.core.model.domain_name)
     pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.topic_filter)
     pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.unique_code)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.localized_topic)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.bookmark_quality -> zeeguu.core.bookmark_quality.top_bookmarks_for_user -> zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.bookmark_quality.fit_for_study)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.bookmark_quality -> zeeguu.core.bookmark_quality.negative_qualities -> zeeguu.core.model.bookmark -> zeeguu.core.bookmark_quality.fit_for_study)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.sql.query_building)
-    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.exercise -> zeeguu.core.model.user_exercise_session -> zeeguu.core.sql.learner.exercises_history -> zeeguu.core.sql.query_building)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.localized_topic -> zeeguu.core.model.topic)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.bookmark_quality -> zeeguu.core.bookmark_quality.top_bookmarks_for_user -> zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.bookmark_quality.fit_for_study)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.bookmark_quality -> zeeguu.core.bookmark_quality.positive_qualities -> zeeguu.core.bookmark_quality.negative_qualities -> zeeguu.core.model.bookmark -> zeeguu.core.bookmark_quality.fit_for_study)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.sql.query_building)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.user_exercise_session -> zeeguu.core.sql.learner.exercises_history -> zeeguu.core.sql.query_building)
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.user_articles)
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.user)
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.user_preferences)
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.exercise_sessions)
-    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.sessions)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.accounts -> zeeguu.api.endpoints.sessions)
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.own_texts)
-    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.reading_sessions)
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.accounts)
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.user_article)
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.feature_toggles)
@@ -2869,6 +2853,7 @@ core/word_scheduling/adaptive/scheduling_algo.py
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.system_languages)
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.search)
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.student)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.speech)
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.activity_tracking)
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.exercises)
     pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.bookmarks_and_words)
@@ -2912,7 +2897,6 @@ core/word_scheduling/adaptive/scheduling_algo.py
   Line: 62
     pylint: wrong-import-position / Import "from datetime import datetime, timedelta" should be placed at the top of the module
   Line: 64
-    pylint: import-error / Unable to import 'numpy'
     pylint: wrong-import-position / Import "from numpy import number" should be placed at the top of the module
     pylint: unused-import / Unused number imported from numpy
   Line: 65
@@ -2953,13 +2937,13 @@ core/word_stats/__init__.py
 
 Check Information
 =================
-         Started: 2024-05-06 22:51:31.369570
-        Finished: 2024-05-06 22:51:46.152419
-      Time Taken: 14.78 seconds
+         Started: 2024-05-07 13:43:46.100857
+        Finished: 2024-05-07 13:44:00.805725
+      Time Taken: 14.70 seconds
        Formatter: grouped
         Profiles: default, no_doc_warnings, no_test_warnings, strictness_medium, strictness_high, strictness_veryhigh, no_member_warnings
       Strictness: None
   Libraries Used: flask
        Tools Run: dodgy, mccabe, profile-validator, pycodestyle, pyflakes, pylint
-  Messages Found: 1427
+  Messages Found: 1418
 
