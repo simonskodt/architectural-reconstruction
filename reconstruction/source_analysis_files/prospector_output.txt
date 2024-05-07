@@ -1,0 +1,2965 @@
+Messages
+========
+
+api/app.py
+  Line: 3
+    pylint: import-error / Unable to import 'flask_cors'
+  Line: 4
+    pylint: import-error / Unable to import 'flask'
+  Line: 5
+    pylint: unused-import / Unused import time
+  Line: 14
+    pylint: import-error / Unable to import 'apimux.log'
+  Line: 16
+    pylint: import-error / Unable to import 'sentry_sdk'
+  Line: 17
+    pylint: import-error / Unable to import 'sentry_sdk.integrations.flask'
+  Line: 64
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.db) (col 4)
+  Line: 74
+    pylint: import-outside-toplevel / Import outside toplevel (endpoints.api) (col 4)
+  Line: 96
+    pylint: import-error / Unable to import 'nltk'
+    pylint: wrong-import-position / Import "import nltk" should be placed at the top of the module
+  Line: 101
+    pyflakes: F841 / local variable 'e' is assigned to but never used (col 1)
+
+api/cross_domain_app.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 8
+    pylint: super-with-arguments / Consider using Python 3 style super() without arguments (col 13)
+
+api/custom_fmd_graphs.py
+  Line: 3
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.User) (col 8)
+  Line: 12
+    pylint: unnecessary-lambda / Lambda may not be necessary (col 42)
+
+api/endpoints/__init__.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 11
+    pylint: wrong-import-position / Import "from . import feature_toggles" should be placed at the top of the module
+    pyflakes: F401 / '.feature_toggles' imported but unused (col 1)
+  Line: 12
+    pylint: wrong-import-position / Import "from . import exercises" should be placed at the top of the module
+    pyflakes: F401 / '.exercises' imported but unused (col 1)
+  Line: 13
+    pylint: wrong-import-position / Import "from . import exercise_sessions" should be placed at the top of the module
+    pyflakes: F401 / '.exercise_sessions' imported but unused (col 1)
+  Line: 14
+    pylint: wrong-import-position / Import "from . import sessions" should be placed at the top of the module
+    pyflakes: F401 / '.sessions' imported but unused (col 1)
+  Line: 15
+    pylint: wrong-import-position / Import "from . import system_languages" should be placed at the top of the module
+    pyflakes: F401 / '.system_languages' imported but unused (col 1)
+  Line: 16
+    pylint: wrong-import-position / Import "from . import translation" should be placed at the top of the module
+    pyflakes: F401 / '.translation' imported but unused (col 1)
+  Line: 17
+    pylint: wrong-import-position / Import "from . import activity_tracking" should be placed at the top of the module
+    pyflakes: F401 / '.activity_tracking' imported but unused (col 1)
+  Line: 18
+    pylint: wrong-import-position / Import "from . import bookmarks_and_words" should be placed at the top of the module
+    pyflakes: F401 / '.bookmarks_and_words' imported but unused (col 1)
+  Line: 19
+    pylint: wrong-import-position / Import "from . import user" should be placed at the top of the module
+    pyflakes: F401 / '.user' imported but unused (col 1)
+  Line: 20
+    pylint: wrong-import-position / Import "from . import user_statistics" should be placed at the top of the module
+    pyflakes: F401 / '.user_statistics' imported but unused (col 1)
+  Line: 21
+    pylint: wrong-import-position / Import "from . import user_preferences" should be placed at the top of the module
+    pyflakes: F401 / '.user_preferences' imported but unused (col 1)
+  Line: 22
+    pylint: wrong-import-position / Import "from . import user_article" should be placed at the top of the module
+    pyflakes: F401 / '.user_article' imported but unused (col 1)
+  Line: 23
+    pylint: wrong-import-position / Import "from . import user_articles" should be placed at the top of the module
+    pyflakes: F401 / '.user_articles' imported but unused (col 1)
+  Line: 24
+    pylint: wrong-import-position / Import "from . import user_languages" should be placed at the top of the module
+    pyflakes: F401 / '.user_languages' imported but unused (col 1)
+  Line: 25
+    pylint: wrong-import-position / Import "from .teacher_dashboard import *" should be placed at the top of the module
+    pyflakes: F401 / '.teacher_dashboard.*' imported but unused (col 1)
+  Line: 26
+    pylint: wrong-import-position / Import "from . import topics" should be placed at the top of the module
+    pyflakes: F401 / '.topics' imported but unused (col 1)
+  Line: 27
+    pylint: wrong-import-position / Import "from . import search" should be placed at the top of the module
+    pyflakes: F401 / '.search' imported but unused (col 1)
+  Line: 28
+    pylint: wrong-import-position / Import "from . import article" should be placed at the top of the module
+    pyflakes: F401 / '.article' imported but unused (col 1)
+  Line: 29
+    pylint: wrong-import-position / Import "from . import accounts" should be placed at the top of the module
+    pyflakes: F401 / '.accounts' imported but unused (col 1)
+  Line: 30
+    pylint: wrong-import-position / Import "from . import speech" should be placed at the top of the module
+    pyflakes: F401 / '.speech' imported but unused (col 1)
+  Line: 31
+    pylint: wrong-import-position / Import "from . import own_texts" should be placed at the top of the module
+    pyflakes: F401 / '.own_texts' imported but unused (col 1)
+  Line: 32
+    pylint: wrong-import-position / Import "from .student import *" should be placed at the top of the module
+    pyflakes: F401 / '.student.*' imported but unused (col 1)
+  Line: 33
+    pylint: wrong-import-position / Import "from .nlp import *" should be placed at the top of the module
+    pyflakes: F401 / '.nlp.*' imported but unused (col 1)
+  Line: 34
+    pylint: wrong-import-position / Import "from .reading_sessions import *" should be placed at the top of the module
+    pyflakes: F401 / '.reading_sessions.*' imported but unused (col 1)
+
+api/endpoints/accounts.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 3
+    pylint: import-error / Unable to import 'flask'
+  Line: 34
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.account_management.user_account_creation.create_account) (col 4)
+  Line: 65
+    pylint: import-outside-toplevel / Import outside toplevel (core.account_management.user_account_creation.create_basic_account) (col 4)
+  Line: 108
+    pylint: unused-variable / Unused variable 'e' (col 4)
+  Line: 110
+    pyflakes: F841 / local variable 'e' is assigned to but never used (col 5)
+  Line: 123
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.emailer.password_reset.send_password_reset_email) (col 4)
+
+api/endpoints/activity_tracking.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 2
+    pylint: import-error / Unable to import 'flask'
+  Line: 42
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.emailer.zeeguu_mailer.ZeeguuMailer) (col 8)
+
+api/endpoints/article.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 2
+    pylint: import-error / Unable to import 'flask'
+  Line: 6
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 12
+    pylint: import-error / Unable to import 'langdetect'
+  Line: 20
+    pylint: inconsistent-return-statements / Either all return statements in a function should return an expression, or none of them should.
+  Line: 45
+    pylint: unused-variable / Unused variable 'e' (col 4)
+  Line: 48
+    pylint: import-error / Unable to import 'sentry_sdk' (col 8)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 8)
+  Line: 107
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 8)
+  Line: 111
+    pylint: bare-except / No exception type(s) specified (col 4)
+
+api/endpoints/bookmarks_and_words.py
+  Line: 3
+    pylint: import-error / Unable to import 'flask'
+  Line: 4
+    pylint: import-error / Unable to import 'flask'
+  Line: 5
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 127
+    pylint: use-dict-literal / Consider using '{"bookmarks": bookmarks, "article_title": article.title}' instead of a call to 'dict'. (col 23)
+  Line: 142
+    pylint: use-dict-literal / Consider using '{"bookmarks": bookmarks, "article_title": article.title}' instead of a call to 'dict'. (col 23)
+
+api/endpoints/exercise_sessions.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 8
+    pylint: import-error / Unable to import 'flask'
+  Line: 25
+    pylint: use-dict-literal / Consider using '{"id": session.id}' instead of a call to 'dict'. (col 23)
+  Line: 35
+    pylint: use-dict-literal / Consider using '{"id": session.id, "duration": session.duration}' instead of a call to 'dict'. (col 23)
+  Line: 54
+    pylint: redefined-builtin / Redefining built-in 'id' (col 26)
+  Line: 56
+    pylint: use-dict-literal / Consider using '{"id": session.id, "duration": session.duration}' instead of a call to 'dict'. (col 23)
+
+api/endpoints/exercises.py
+  Line: 2
+    pylint: import-error / Unable to import 'flask'
+  Line: 10
+    pylint: import-error / Unable to import 'flask'
+  Line: 93
+    pylint: use-dict-literal / Consider using '{"id": exercise.id, "outcome": exercise.outcome.outcome, "source": exercise.source.source, ... }' instead of a call to 'dict'. (col 12)
+  Line: 140
+    pylint: bare-except / No exception type(s) specified (col 4)
+
+api/endpoints/feature_toggles.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+
+api/endpoints/nlp.py
+  Line: 5
+    pylint: import-error / Unable to import 'flask'
+  Line: 20
+    pylint: consider-iterating-dictionary / Consider iterating the dictionary directly instead of calling .keys() (col 23)
+  Line: 37
+    pylint: consider-iterating-dictionary / Consider iterating the dictionary directly instead of calling .keys() (col 23)
+  Line: 55
+    pylint: consider-iterating-dictionary / Consider iterating the dictionary directly instead of calling .keys() (col 23)
+  Line: 73
+    pylint: consider-iterating-dictionary / Consider iterating the dictionary directly instead of calling .keys() (col 23)
+  Line: 94
+    pylint: consider-iterating-dictionary / Consider iterating the dictionary directly instead of calling .keys() (col 23)
+
+api/endpoints/own_texts.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 3
+    pylint: import-error / Unable to import 'flask'
+  Line: 51
+    pylint: redefined-builtin / Redefining built-in 'id' (col 20)
+
+api/endpoints/reading_sessions.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 2
+    pylint: import-error / Unable to import 'flask'
+  Line: 21
+    pylint: use-dict-literal / Consider using '{"id": session.id}' instead of a call to 'dict'. (col 23)
+  Line: 31
+    pylint: use-dict-literal / Consider using '{"id": session.id, "duration": session.duration}' instead of a call to 'dict'. (col 23)
+  Line: 40
+    pylint: unused-variable / Unused variable 'session' (col 4)
+  Line: 49
+    pylint: redefined-builtin / Redefining built-in 'id' (col 25)
+  Line: 52
+    pylint: use-dict-literal / Consider using '{"id": reading_session.id, "duration": reading_session.duration}' instead of a call to 'dict'. (col 23)
+
+api/endpoints/search.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 3
+    pylint: import-error / Unable to import 'flask'
+  Line: 72
+    pylint: import-error / Unable to import 'sentry_sdk' (col 8)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 8)
+  Line: 104
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 12)
+  Line: 151
+    pylint: import-error / Unable to import 'sentry_sdk' (col 8)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 8)
+  Line: 181
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 12)
+
+api/endpoints/sessions.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 2
+    pylint: import-error / Unable to import 'flask'
+  Line: 102
+    pylint: bare-except / No exception type(s) specified (col 4)
+
+api/endpoints/speech.py
+  Line: 4
+    pylint: import-error / Unable to import 'flask'
+  Line: 33
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core) (col 4)
+  Line: 34
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.UserWord, zeeguu.core.model.Language) (col 4)
+  Line: 62
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core) (col 4)
+  Line: 64
+    pylint: unused-variable / Unused variable 'db_session' (col 4)
+  Line: 88
+    pylint: import-error / Unable to import 'google.cloud' (col 4)
+    pylint: import-outside-toplevel / Import outside toplevel (google.cloud.texttospeech) (col 4)
+  Line: 125
+    pylint: import-outside-toplevel / Import outside toplevel (hashlib) (col 4)
+
+api/endpoints/student.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 2
+    pylint: import-error / Unable to import 'flask'
+  Line: 16
+    pylint: inconsistent-return-statements / Either all return statements in a function should return an expression, or none of them should.
+  Line: 31
+    pylint: import-error / Unable to import 'sentry_sdk' (col 8)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 8)
+  Line: 53
+    pylint: redefined-builtin / Redefining built-in 'id' (col 16)
+
+api/endpoints/system_languages.py
+  Line: 11
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 13)
+  Line: 13
+    pylint: use-dict-literal / Consider using '{"name": x.name, "code": x.code}' instead of a call to 'dict'. (col 23)
+  Line: 16
+    pylint: use-dict-literal / Consider using '{"name": x.name, "code": x.code}' instead of a call to 'dict'. (col 23)
+
+api/endpoints/teacher_dashboard/__init__.py
+  Line: 1
+    pyflakes: F401 / '.article_management.*' imported but unused (col 1)
+  Line: 2
+    pyflakes: F401 / '.cohorts.*' imported but unused (col 1)
+  Line: 3
+    pyflakes: F401 / '.general.*' imported but unused (col 1)
+  Line: 4
+    pyflakes: F401 / '.student.*' imported but unused (col 1)
+  Line: 5
+    pyflakes: F401 / '.student_exercises.*' imported but unused (col 1)
+  Line: 6
+    pyflakes: F401 / '.student_words.*' imported but unused (col 1)
+  Line: 7
+    pyflakes: F401 / '.student_overviews.*' imported but unused (col 1)
+  Line: 8
+    pyflakes: F401 / '.student_readings.*' imported but unused (col 1)
+
+api/endpoints/teacher_dashboard/_common_api_parameters.py
+  Line: 3
+    pylint: import-error / Unable to import 'flask'
+  Line: 4
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+
+api/endpoints/teacher_dashboard/_only_teachers_decorator.py
+  Line: 2
+    pylint: import-error / Unable to import 'flask'
+
+api/endpoints/teacher_dashboard/_permissions.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 12
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.TeacherCohortMap) (col 4)
+  Line: 32
+    pylint: redefined-builtin / Redefining built-in 'id' (col 30)
+
+api/endpoints/teacher_dashboard/article_management.py
+  Line: 5
+    pylint: import-error / Unable to import 'flask'
+  Line: 6
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 7
+    pylint: import-error / Unable to import 'flask'
+  Line: 8
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+    pylint: unused-import / Unused NoResultFound imported from sqlalchemy.orm.exc
+  Line: 10
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 41
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.emailer.zeeguu_mailer.ZeeguuMailer) (col 4)
+  Line: 47
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 10)
+  Line: 93
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 22)
+  Line: 157
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 4)
+
+api/endpoints/teacher_dashboard/cohorts.py
+  Line: 3
+    pylint: import-error / Unable to import 'flask'
+  Line: 4
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 5
+    pylint: import-error / Unable to import 'flask'
+  Line: 6
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+    pylint: unused-import / Unused NoResultFound imported from sqlalchemy.orm.exc
+  Line: 8
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 17
+    pylint: unused-import / Unused UserReadingSession imported from zeeguu.core.model.user_reading_session
+  Line: 42
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.TeacherCohortMap) (col 4)
+    pylint: reimported / Reimport 'TeacherCohortMap' (imported line 9) (col 4)
+  Line: 84
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.TeacherCohortMap) (col 8)
+    pylint: reimported / Reimport 'TeacherCohortMap' (imported line 9) (col 8)
+  Line: 167
+    pylint: redefined-builtin / Redefining built-in 'id' (col 22)
+  Line: 208
+    pylint: redefined-builtin / Redefining built-in 'id' (col 26)
+
+api/endpoints/teacher_dashboard/general.py
+  Line: 4
+    pylint: import-error / Unable to import 'flask'
+  Line: 19
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 23
+    pylint: unused-import / Unused db imported from zeeguu.core.model
+  Line: 35
+    pylint: redefined-builtin / Redefining built-in 'id' (col 34)
+  Line: 45
+    pylint: redefined-builtin / Redefining built-in 'id' (col 33)
+  Line: 61
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.TeacherCohortMap) (col 4)
+  Line: 66
+    pylint: no-value-for-parameter / No value for argument 'to_date' in function call (col 16)
+
+api/endpoints/teacher_dashboard/helpers.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 31
+    pylint: redefined-builtin / Redefining built-in 'id' (col 30)
+  Line: 46
+    pylint: redefined-builtin / Redefining built-in 'id' (col 20)
+
+api/endpoints/teacher_dashboard/student.py
+  Line: 4
+    pylint: import-error / Unable to import 'flask'
+  Line: 6
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 23
+    pylint: unused-import / Unused db imported from zeeguu.core.model
+  Line: 28
+    pylint: redefined-builtin / Redefining built-in 'id' (col 20)
+  Line: 49
+    pylint: unused-variable / Unused variable 'to_date' (col 29)
+  Line: 67
+    pylint: redefined-builtin / Redefining built-in 'id' (col 39)
+  Line: 88
+    pylint: redefined-builtin / Redefining built-in 'id' (col 29)
+
+api/endpoints/teacher_dashboard/student_exercises.py
+  Line: 1
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 10
+    pylint: unused-import / Unused db imported from zeeguu.core.model
+
+api/endpoints/teacher_dashboard/student_overviews.py
+  Line: 1
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 8
+    pylint: unused-import / Unused db imported from zeeguu.core.model
+
+api/endpoints/teacher_dashboard/student_readings.py
+  Line: 1
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 7
+    pylint: unused-import / Unused db imported from zeeguu.core.model
+
+api/endpoints/teacher_dashboard/student_words.py
+  Line: 1
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 7
+    pylint: unused-import / Unused db imported from zeeguu.core.model
+
+api/endpoints/topics.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 3
+    pylint: import-error / Unable to import 'flask'
+  Line: 68
+    pylint: import-error / Unable to import 'sentry_sdk' (col 8)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 8)
+  Line: 97
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 12)
+  Line: 179
+    pylint: import-error / Unable to import 'sentry_sdk' (col 8)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 8)
+  Line: 208
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 12)
+  Line: 216
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 11)
+  Line: 221
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Topic, zeeguu.core.model.Language) (col 4)
+    pylint: reimported / Reimport 'Topic' (imported line 4) (col 4)
+    pylint: reimported / Reimport 'Language' (imported line 4) (col 4)
+
+api/endpoints/translation.py
+  Line: 4
+    pylint: import-error / Unable to import 'flask'
+  Line: 5
+    pylint: import-error / Unable to import 'flask'
+  Line: 12
+    pylint: import-error / Unable to import 'python_translators.translation_query'
+  Line: 162
+    pylint: use-dict-literal / Consider using '{"translations": translations}' instead of a call to 'dict'. (col 23)
+  Line: 229
+    pylint: unused-variable / Unused variable 'title_str' (col 4)
+  Line: 252
+    pylint: unused-variable / Unused variable 'selected_from_predefined_choices' (col 4)
+  Line: 279
+    pylint: use-dict-literal / Consider using '{"bookmark_id": bookmark.id}' instead of a call to 'dict'. (col 23)
+
+api/endpoints/user.py
+  Line: 3
+    pylint: import-error / Unable to import 'flask'
+  Line: 10
+    pylint: unused-import / Unused UserPreference imported from core.model
+  Line: 86
+    pylint: use-dict-literal / Consider using '{"native": u.native_language_id, "learned": u.learned_language_id}' instead of a call to 'dict'. (col 10)
+  Line: 166
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.emailer.zeeguu_mailer.ZeeguuMailer) (col 4)
+
+api/endpoints/user_article.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 2
+    pylint: import-error / Unable to import 'flask'
+  Line: 12
+    pylint: import-error / Unable to import 'newspaper'
+  Line: 167
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.content_retriever.download_and_parse) (col 4)
+
+api/endpoints/user_articles.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 10
+    pylint: import-error / Unable to import 'flask'
+  Line: 26
+    pylint: bare-except / No exception type(s) specified (col 4)
+
+api/endpoints/user_languages.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+  Line: 3
+    pylint: import-error / Unable to import 'flask'
+  Line: 37
+    pylint: bare-except / No exception type(s) specified (col 4)
+  Line: 41
+    pylint: bare-except / No exception type(s) specified (col 4)
+  Line: 45
+    pylint: bare-except / No exception type(s) specified (col 4)
+  Line: 83
+    pylint: import-error / Unable to import 'sentry_sdk' (col 8)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 8)
+
+api/endpoints/user_preferences.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+
+api/endpoints/user_statistics.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+
+api/test/fixtures.py
+  Line: 3
+    pylint: import-error / Unable to import 'pytest'
+  Line: 4
+    pylint: import-error / Unable to import 'requests_mock'
+  Line: 85
+    pylint: use-dict-literal / Consider using '{"password": 'test', "username": 'test', "learned_language": 'de'}' instead of a call to 'dict'. (col 25)
+  Line: 104
+    pylint: bare-except / No exception type(s) specified (col 8)
+  Line: 107
+    pylint: pointless-string-statement / String statement has no effect (col 4)
+  Line: 113
+    pylint: dangerous-default-value / Dangerous default value dict() (builtins.dict) as argument (col 4)
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 48)
+  Line: 118
+    pylint: dangerous-default-value / Dangerous default value dict() (builtins.dict) as argument (col 4)
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 34)
+  Line: 122
+    pylint: bare-except / No exception type(s) specified (col 8)
+  Line: 133
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.User, zeeguu.core.model.Teacher) (col 8)
+  Line: 135
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.db) (col 8)
+  Line: 144
+    pylint: use-dict-literal / Consider using '{"word": 'Freund', "translation": 'friend', "context": 'Mein Freund lächelte', ... }' instead of a call to 'dict'. (col 75)
+
+api/test/test_account_creation.py
+  Line: 1
+    pylint: unused-import / Unused client imported from zeeguu.api.test.fixtures
+  Line: 10
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 19)
+  Line: 11
+    pylint: use-dict-literal / Consider using '{"password": TEST_PASS, "username": TEST_USER}' instead of a call to 'dict'. (col 21)
+  Line: 17
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 36)
+  Line: 18
+    pylint: use-dict-literal / Consider using '{"password": TEST_PASS, "username": TEST_USER}' instead of a call to 'dict'. (col 21)
+  Line: 28
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 56)
+  Line: 29
+    pylint: use-dict-literal / Consider using '{"username": 'gigi', "password": '2sh', "invite_code": 'test'}' instead of a call to 'dict'. (col 16)
+  Line: 34
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 53)
+  Line: 35
+    pylint: use-dict-literal / Consider using '{"username": 'gigi', "invite_code": 'test'}' instead of a call to 'dict'. (col 16)
+  Line: 40
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 56)
+  Line: 41
+    pylint: use-dict-literal / Consider using '{"username": 'gigi'}' instead of a call to 'dict'. (col 16)
+  Line: 46
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 25)
+  Line: 53
+    pylint: use-dict-literal / Consider using '{"code": code, "password": 'updated'}' instead of a call to 'dict'. (col 16)
+  Line: 58
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 46)
+  Line: 65
+    pylint: use-dict-literal / Consider using '{"code": code, "password": 'updated'}' instead of a call to 'dict'. (col 16)
+  Line: 69
+    pylint: use-dict-literal / Consider using '{"password": 'updated'}' instead of a call to 'dict'. (col 16)
+  Line: 76
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 50)
+  Line: 84
+    pylint: use-dict-literal / Consider using '{"code": 'thiswontwork', "password": 'updated'}' instead of a call to 'dict'. (col 16)
+  Line: 89
+    pylint: use-dict-literal / Consider using '{"code": code, "password": '2sh'}' instead of a call to 'dict'. (col 16)
+  Line: 94
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 23)
+  Line: 95
+    pylint: use-dict-literal / Consider using '{"password": TEST_PASS, "username": TEST_USER}' instead of a call to 'dict'. (col 21)
+
+api/test/test_article.py
+  Line: 2
+    pylint: unused-import / Unused logged_in_client imported from fixtures as client
+  Line: 5
+    pyflakes: F811 / redefinition of unused 'client' from line 2 (col 25)
+  Line: 6
+    pylint: use-dict-literal / Consider using '{"url": URL_SPIEGEL_VENEZUELA}' instead of a call to 'dict'. (col 64)
+  Line: 13
+    pyflakes: F811 / redefinition of unused 'client' from line 2 (col 27)
+  Line: 15
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 24)
+  Line: 19
+    pylint: use-dict-literal / Consider using '{"url": URL_FAZ_LEIGHTATHLETIK}' instead of a call to 'dict'. (col 56)
+  Line: 20
+    pylint: use-dict-literal / Consider using '{"starred": 'True', "article_id": article_id}' instead of a call to 'dict'. (col 39)
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 16)
+  Line: 23
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 24)
+  Line: 27
+    pylint: use-dict-literal / Consider using '{"liked": 'True', "article_id": article_id}' instead of a call to 'dict'. (col 39)
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 16)
+  Line: 30
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 24)
+
+api/test/test_bookmark.py
+  Line: 1
+    pylint: unused-import / Unused logged_in_client imported from fixtures as client
+  Line: 4
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 17)
+  Line: 9
+    pylint: literal-comparison / In 'bookmarks is not []', use '!=' when comparing constant literals not 'is not' ('bookmarks != []') (col 11)
+  Line: 12
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 59)
+  Line: 20
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 37)
+  Line: 21
+    pylint: unused-variable / Unused variable 'bookmark_id' (col 4)
+  Line: 26
+    pylint: use-dict-literal / Consider using '{"word": bookmark1['from'], "url": bookmark1['url'], "title": bookmark1['title'], ... }' instead of a call to 'dict'. (col 11)
+  Line: 43
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 26)
+  Line: 51
+    pylint: use-dict-literal / Consider using '{"word": bookmark1['from'], "url": bookmark1['url'], "title": bookmark1['title'], ... }' instead of a call to 'dict'. (col 11)
+  Line: 69
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 24)
+  Line: 73
+    pylint: literal-comparison / In 'top_bookmarks is not []', use '!=' when comparing constant literals not 'is not' ('top_bookmarks != []') (col 11)
+  Line: 76
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 58)
+  Line: 94
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 41)
+  Line: 101
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 16)
+  Line: 112
+    pylint: literal-comparison / In 'bookmarks is not []', use '!=' when comparing constant literals not 'is not' ('bookmarks != []') (col 11)
+  Line: 117
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 27)
+  Line: 118
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 4)
+
+api/test/test_bookmarks.py
+  Line: 1
+    pylint: unused-import / Unused logged_in_client imported from fixtures as client
+  Line: 5
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 37)
+  Line: 8
+    pylint: use-dict-literal / Consider using '{"word": 'Freund', "translation": 'friend', "context": 'Mein Freund lächelte', ... }' instead of a call to 'dict'. (col 13)
+
+api/test/test_endpoint_names.py
+  Line: 1
+    pylint: unused-import / Unused test_app imported from zeeguu.api.test.fixtures
+  Line: 4
+    pyflakes: F811 / redefinition of unused 'test_app' from line 1 (col 39)
+
+api/test/test_exercise_session.py
+  Line: 1
+    pylint: unused-import / Unused import json
+  Line: 2
+    pylint: unused-import / Unused import time
+  Line: 4
+    pylint: unused-import / Unused logged_in_client imported from fixtures as client
+  Line: 5
+    pylint: unused-import / Unused URL_SPIEGEL_VENEZUELA imported from zeeguu.core.test.mocking_the_web
+  Line: 8
+    pyflakes: F811 / redefinition of unused 'client' from line 4 (col 37)
+  Line: 15
+    pyflakes: F811 / redefinition of unused 'client' from line 4 (col 34)
+  Line: 20
+    pylint: use-dict-literal / Consider using '{"outcome": 1, "source": 1, "solving_speed": 100, "bookmark_id": bookmark_id, ... }' instead of a call to 'dict'. (col 11)
+  Line: 31
+    pylint: use-dict-literal / Consider using '{"id": 1, "duration": 2000}' instead of a call to 'dict'. (col 49)
+
+api/test/test_reading_session.py
+  Line: 1
+    pylint: unused-import / Unused logged_in_client imported from fixtures as client
+  Line: 4
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 36)
+  Line: 5
+    pylint: use-dict-literal / Consider using '{"article_id": 1}' instead of a call to 'dict'. (col 69)
+  Line: 11
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 33)
+  Line: 14
+    pylint: use-dict-literal / Consider using '{"id": session_id, "duration": 2000}' instead of a call to 'dict'. (col 48)
+  Line: 20
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 30)
+  Line: 23
+    pylint: use-dict-literal / Consider using '{"id": session_id}' instead of a call to 'dict'. (col 54)
+
+api/test/test_teacher_dashboard.py
+  Line: 1
+    pylint: unused-import / Unused logged_in_teacher imported from fixtures as client
+  Line: 4
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 21)
+  Line: 5
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 24)
+  Line: 9
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 21)
+  Line: 14
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 44)
+  Line: 21
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 22)
+  Line: 29
+    pylint: literal-comparison / In 'users is not []', use '!=' when comparing constant literals not 'is not' ('users != []') (col 11)
+  Line: 33
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 25)
+  Line: 39
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 24)
+  Line: 49
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 24)
+  Line: 62
+    pylint: literal-comparison / In 'cohorts is not []', use '!=' when comparing constant literals not 'is not' ('cohorts != []') (col 11)
+  Line: 65
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 49)
+  Line: 67
+    pylint: unused-variable / Unused variable 'cohorts' (col 4)
+  Line: 70
+    pylint: use-dict-literal / Consider using '{"password": 'test', "username": 'test', "learned_language": 'fr'}' instead of a call to 'dict'. (col 19)
+
+api/test/test_user_article.py
+  Line: 1
+    pylint: unused-import / Unused logged_in_client imported from fixtures as client
+  Line: 5
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 23)
+  Line: 15
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 25)
+  Line: 23
+    pylint: use-dict-literal / Consider using '{"article_id": article_id, "starred": 'True'}' instead of a call to 'dict'. (col 39)
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 16)
+  Line: 30
+    pylint: use-dict-literal / Consider using '{"article_id": article_id, "liked": 'True'}' instead of a call to 'dict'. (col 39)
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 16)
+  Line: 38
+    pylint: use-dict-literal / Consider using '{"article_id": article_id, "starred": 'False'}' instead of a call to 'dict'. (col 39)
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 16)
+  Line: 45
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 25)
+  Line: 46
+    pylint: use-dict-literal / Consider using '{"url": URL_SPIEGEL_VENEZUELA}' instead of a call to 'dict'. (col 58)
+
+api/test/test_user_data.py
+  Line: 1
+    pylint: unused-import / Unused logged_in_client imported from fixtures as client
+  Line: 4
+    pyflakes: F811 / redefinition of unused 'client' from line 1 (col 31)
+
+api/utils/__init__.py
+  Line: 1
+    pyflakes: F401 / '.route_wrappers.cross_domain' imported but unused (col 1)
+  Line: 2
+    pyflakes: F401 / '.json_result.json_result' imported but unused (col 1)
+
+api/utils/abort_handling.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask'
+
+api/utils/feedparser_extensions.py
+  Line: 2
+    pylint: import-error / Unable to import 'bs4'
+  Line: 3
+    pylint: multiple-imports / Multiple imports on one line (urllib.request, urllib.error, urllib.parse)
+  Line: 4
+    pylint: import-error / Unable to import 'feedparser'
+  Line: 16
+    pylint: consider-using-with / Consider using 'with' for resource-allocating operations (col 15)
+  Line: 39
+    pylint: unused-variable / Unused variable 'e' (col 4)
+
+api/utils/json_result.py
+  Line: 3
+    pylint: unused-import / Unused date imported from datetime
+  Line: 5
+    pylint: import-error / Unable to import 'flask'
+
+api/utils/route_wrappers.py
+  Line: 2
+    pylint: import-error / Unable to import 'flask'
+  Line: 22
+    pylint: bare-except / No exception type(s) specified (col 8)
+  Line: 37
+    pylint: unreachable / Unreachable code (col 8)
+
+api/utils/translator.py
+  Line: 6
+    pylint: import-error / Unable to import 'apimux.api_base'
+  Line: 7
+    pylint: import-error / Unable to import 'apimux.mux'
+  Line: 8
+    pylint: import-error / Unable to import 'apimux.log'
+  Line: 10
+    pylint: import-error / Unable to import 'python_translators.config'
+  Line: 11
+    pylint: import-error / Unable to import 'python_translators.translation_response'
+  Line: 16
+    pylint: import-error / Unable to import 'python_translators.translation_response'
+  Line: 17
+    pylint: import-error / Unable to import 'python_translators.factories.google_translator_factory'
+  Line: 20
+    pylint: import-error / Unable to import 'python_translators.factories.microsoft_translator_factory'
+  Line: 23
+    pylint: import-error / Unable to import 'python_translators.translators.wordnik_translator'
+  Line: 39
+    pylint: super-with-arguments / Consider using Python 3 style super() without arguments (col 8)
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 53)
+  Line: 43
+    pylint: use-dict-literal / Consider using '{"source_language": data['source_language'], "target_language": data['target_language'], ... }' instead of a call to 'dict'. (col 22)
+  Line: 58
+    pylint: super-with-arguments / Consider using Python 3 style super() without arguments (col 8)
+  Line: 61
+    pylint: use-dict-literal / Consider using '{"source_language": data['source_language'], "target_language": data['target_language'], ... }' instead of a call to 'dict'. (col 22)
+  Line: 76
+    pylint: super-with-arguments / Consider using Python 3 style super() without arguments (col 8)
+  Line: 81
+    pylint: use-dict-literal / Consider using '{"source_language": data['source_language'], "target_language": data['target_language'], ... }' instead of a call to 'dict'. (col 22)
+  Line: 96
+    pylint: super-with-arguments / Consider using Python 3 style super() without arguments (col 8)
+  Line: 101
+    pylint: use-dict-literal / Consider using '{"source_language": data['source_language'], "target_language": data['target_language'], ... }' instead of a call to 'dict'. (col 22)
+  Line: 116
+    pylint: super-with-arguments / Consider using Python 3 style super() without arguments (col 8)
+  Line: 121
+    pylint: use-dict-literal / Consider using '{"source_language": data['source_language'], "target_language": data['target_language'], ... }' instead of a call to 'dict'. (col 22)
+  Line: 150
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 12)
+  Line: 168
+    pylint: dangerous-default-value / Dangerous default value [] as argument
+    pylint: dangerous-default-value / Dangerous default value [] as argument
+  Line: 195
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 8)
+  Line: 197
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 17)
+  Line: 201
+    pylint: unused-variable / Unused variable 'service_name' (col 8)
+  Line: 224
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 8)
+
+config/loader.py
+  Line: 3
+    pylint: unused-import / Unused import sys
+  Line: 6
+    pylint: dangerous-default-value / Dangerous default value [] as argument
+  Line: 34
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 19)
+  Line: 38
+    pylint: consider-using-sys-exit / Consider using 'sys.exit' instead (col 12)
+  Line: 46
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 16)
+  Line: 50
+    pylint: consider-using-sys-exit / Consider using 'sys.exit' instead (col 12)
+  Line: 70
+    pylint: inconsistent-return-statements / Either all return statements in a function should return an expression, or none of them should.
+  Line: 73
+    pylint: unused-variable / Unused variable 'e' (col 4)
+  Line: 78
+    pylint: consider-using-sys-exit / Consider using 'sys.exit' instead (col 8)
+
+core/account_management/user_account_creation.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 24
+    pylint: too-many-arguments / Too many arguments (8/5)
+  Line: 36
+    pylint: broad-exception-raised / Raising too general exception: Exception (col 8)
+  Line: 39
+    pylint: broad-exception-raised / Raising too general exception: Exception (col 8)
+  Line: 46
+    pylint: broad-exception-raised / Raising too general exception: Exception (col 12)
+  Line: 91
+    pylint: broad-exception-raised / Raising too general exception: Exception (col 8)
+    pylint: raise-missing-from / Consider explicitly re-raising using 'except Exception as exc' and 'raise Exception('There is already an account for this email.') from exc' (col 8)
+  Line: 94
+    pylint: broad-exception-raised / Raising too general exception: Exception (col 8)
+    pylint: raise-missing-from / Consider explicitly re-raising using 'raise Exception('Could not create the account') from e' (col 8)
+  Line: 100
+    pylint: broad-exception-raised / Raising too general exception: Exception (col 8)
+  Line: 103
+    pylint: broad-exception-raised / Raising too general exception: Exception (col 8)
+  Line: 110
+    pylint: broad-exception-raised / Raising too general exception: Exception (col 12)
+  Line: 134
+    pylint: broad-exception-raised / Raising too general exception: Exception (col 8)
+    pylint: raise-missing-from / Consider explicitly re-raising using 'except Exception as exc' and 'raise Exception('There is already an account for this email.') from exc' (col 8)
+  Line: 137
+    pylint: broad-exception-raised / Raising too general exception: Exception (col 8)
+    pylint: raise-missing-from / Consider explicitly re-raising using 'raise Exception('Could not create the account') from e' (col 8)
+
+core/bookmark_quality/__init__.py
+  Line: 1
+    pyflakes: F401 / '.positive_qualities.quality_bookmark' imported but unused (col 1)
+  Line: 2
+    pyflakes: F401 / '.positive_qualities.quality_top_bookmark' imported but unused (col 1)
+  Line: 3
+    pyflakes: F401 / '.top_bookmarks_for_user.top_bookmarks' imported but unused (col 1)
+  Line: 4
+    pyflakes: F401 / '.negative_qualities.bad_quality_bookmark' imported but unused (col 1)
+
+core/bookmark_quality/negative_qualities.py
+  Line: 14
+    pylint: import-outside-toplevel / Import outside toplevel (re) (col 4)
+  Line: 44
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.bookmark.Bookmark) (col 4)
+  Line: 58
+    pylint: bare-except / No exception type(s) specified (col 4)
+  Line: 59
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 14)
+  Line: 63
+    pylint: inconsistent-return-statements / Either all return statements in a function should return an expression, or none of them should.
+
+core/bookmark_quality/positive_qualities.py
+  Line: 25
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Bookmark) (col 4)
+
+core/bookmark_quality/top_bookmarks_for_user.py
+  Line: 2
+    pylint: import-error / Unable to import 'wordstats'
+  Line: 7
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Bookmark, zeeguu.core.model.UserWord) (col 4)
+  Line: 17
+    pycodestyle: E712 / comparison to False should be 'if cond is False:' or 'if not cond:' (col 34)
+    pylint: singleton-comparison / Comparison 'Bookmark.learned == False' should be 'Bookmark.learned is False' if checking for the singleton value False, or 'not Bookmark.learned' if testing for falsiness (col 16)
+  Line: 26
+    pylint: unnecessary-lambda / Lambda may not be necessary (col 57)
+
+core/content_quality/quality_filter.py
+  Line: 1
+    pylint: import-error / Unable to import 'newspaper'
+
+core/content_recommender/__init__.py
+  Line: 1
+    pyflakes: F401 / '.elastic_recommender.article_recommendations_for_user' imported but unused (col 1)
+
+core/content_recommender/elastic_recommender.py
+  Line: 10
+    pylint: import-error / Unable to import 'elasticsearch'
+  Line: 11
+    pylint: import-error / Unable to import 'elasticsearch_dsl'
+    pylint: unused-import / Unused SF imported from elasticsearch_dsl
+  Line: 13
+    pylint: unused-import / Unused UserArticle imported from zeeguu.core.model
+  Line: 31
+    pylint: too-many-locals / Too many local variables (16/15)
+  Line: 82
+    pylint: too-many-arguments / Too many arguments (6/5)
+    pylint: too-many-locals / Too many local variables (20/15)
+  Line: 164
+    pylint: too-many-arguments / Too many arguments (6/5)
+    pylint: too-many-locals / Too many local variables (18/15)
+  Line: 231
+    pylint: too-many-arguments / Too many arguments (8/5)
+    pylint: too-many-locals / Too many local variables (18/15)
+  Line: 260
+    pylint: consider-using-in / Consider merging these comparisons with 'in' by using 'topic not in (None, 'all')'. Use a set instead if elements are hashable. (col 7)
+    pylint: singleton-comparison / Comparison 'topic != None' should be 'topic is not None' (col 7)
+  Line: 264
+    pylint: no-value-for-parameter / No value for argument 'level' in function call (col 37)
+  Line: 284
+    pylint: unnecessary-comprehension / Unnecessary use of a comprehension, use list(input_list) instead. (col 20)
+
+core/content_retriever/__init__.py
+  Line: 5
+    pylint: import-outside-toplevel / Import outside toplevel (parse_with_readability_server.download_and_parse) (col 4)
+
+core/content_retriever/article_downloader.py
+  Line: 9
+    pylint: import-error / Unable to import 'newspaper'
+  Line: 11
+    pylint: import-error / Unable to import 'pymysql'
+  Line: 18
+    pylint: unused-import / Unused ZeeguuMailer imported from zeeguu.core.emailer.zeeguu_mailer
+  Line: 24
+    pylint: import-error / Unable to import 'sentry_sdk'
+  Line: 31
+    pylint: wrong-import-position / Import "import zeeguu" should be placed at the top of the module
+  Line: 38
+    pylint: missing-timeout / Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely (col 15)
+  Line: 43
+    pylint: import-outside-toplevel / Import outside toplevel (datetime.datetime) (col 4)
+  Line: 59
+    pylint: inconsistent-return-statements / Either all return statements in a function should return an expression, or none of them should.
+    pylint: too-many-locals / Too many local variables (20/15)
+    mccabe: MC0001 / download_from_feed is too complex (28)
+  Line: 89
+    pylint: import-outside-toplevel / Import outside toplevel (traceback) (col 8)
+  Line: 138
+    pylint: broad-exception-raised / Raising too general exception: Exception (col 12)
+    pylint: raise-missing-from / Consider explicitly re-raising using 'except Exception as exc' and 'raise Exception(f'- Too many redirects') from exc' (col 12)
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 28)
+  Line: 140
+    pylint: broad-exception-raised / Raising too general exception: Exception (col 12)
+    pylint: raise-missing-from / Consider explicitly re-raising using 'except Exception as exc' and 'raise Exception(f"- Could not get url after redirects for {feed_item['url']}") from exc' (col 12)
+  Line: 159
+    pyflakes: F405 / 'SkippedForTooOld' may be undefined, or defined from star imports: zeeguu.core.content_retriever.crawler_exceptions (col 16)
+  Line: 163
+    pyflakes: F405 / 'SkippedForLowQuality' may be undefined, or defined from star imports: zeeguu.core.content_retriever.crawler_exceptions (col 16)
+  Line: 168
+    pyflakes: F405 / 'SkippedAlreadyInDB' may be undefined, or defined from star imports: zeeguu.core.content_retriever.crawler_exceptions (col 16)
+  Line: 173
+    pyflakes: F405 / 'FailedToParseWithReadabilityServer' may be undefined, or defined from star imports: zeeguu.core.content_retriever.crawler_exceptions (col 16)
+  Line: 177
+    pyflakes: F841 / local variable 'e' is assigned to but never used (col 9)
+  Line: 192
+    pylint: import-outside-toplevel / Import outside toplevel (traceback) (col 12)
+  Line: 211
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 9)
+  Line: 224
+    pyflakes: F405 / 'SkippedAlreadyInDB' may be undefined, or defined from star imports: zeeguu.core.content_retriever.crawler_exceptions (col 15)
+  Line: 231
+    pyflakes: F405 / 'SkippedForLowQuality' may be undefined, or defined from star imports: zeeguu.core.content_retriever.crawler_exceptions (col 15)
+  Line: 237
+    pylint: import-error / Unable to import 'bs4' (col 4)
+    pylint: import-outside-toplevel / Import outside toplevel (bs4.BeautifulSoup) (col 4)
+
+core/content_retriever/parse_with_newspaper.py
+  Line: 1
+    pylint: import-error / Unable to import 'newspaper'
+  Line: 2
+    pylint: import-error / Unable to import 'langdetect'
+
+core/content_retriever/parse_with_readability_server.py
+  Line: 3
+    pylint: import-error / Unable to import 'newspaper'
+  Line: 4
+    pylint: import-error / Unable to import 'langdetect'
+
+core/content_retriever/video_dowloader.py
+  Line: 8
+    pylint: unused-import / Unused Article imported from zeeguu.core.model
+  Line: 60
+    pylint: assignment-from-no-return / Assigning result of a function call, where the function has no return (col 8)
+    pylint: unused-variable / Unused variable 'e' (col 8)
+  Line: 66
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Article) (col 4)
+    pylint: reimported / Reimport 'Article' (imported line 8) (col 4)
+    pyflakes: F811 / redefinition of unused 'Article' from line 8 (col 5)
+  Line: 79
+    pylint: singleton-comparison / Comparison 'new_article == None' should be 'new_article is None' (col 7)
+  Line: 112
+    pylint: wrong-import-position / Import "import sys" should be placed at the top of the module
+
+core/definition_of_learned/__init__.py
+  Line: 1
+    pyflakes: F401 / '.is_learned.is_learned_based_on_exercise_outcomes' imported but unused (col 1)
+  Line: 2
+    pyflakes: F401 / '.is_learned.CORRECTS_IN_DISTINCT_DAYS_FOR_LEARNED' imported but unused (col 1)
+
+core/elastic/elastic_query_builder.py
+  Line: 1
+    pylint: import-error / Unable to import 'elasticsearch_dsl'
+  Line: 12
+    pylint: redefined-builtin / Redefining built-in 'dict' (col 16)
+  Line: 20
+    pylint: too-many-arguments / Too many arguments (13/5)
+    pylint: too-many-locals / Too many local variables (22/15)
+  Line: 140
+    pylint: too-many-arguments / Too many arguments (13/5)
+    pylint: too-many-locals / Too many local variables (16/15)
+  Line: 143
+    pylint: unused-argument / Unused argument 'topics' (col 4)
+  Line: 144
+    pylint: unused-argument / Unused argument 'unwanted_topics' (col 4)
+  Line: 145
+    pylint: unused-argument / Unused argument 'user_topics' (col 4)
+  Line: 146
+    pylint: unused-argument / Unused argument 'unwanted_user_topics' (col 4)
+  Line: 150
+    pylint: unused-argument / Unused argument 'es_scale' (col 4)
+  Line: 151
+    pylint: unused-argument / Unused argument 'es_decay' (col 4)
+  Line: 152
+    pylint: unused-argument / Unused argument 'es_weight' (col 4)
+
+core/elastic/indexing.py
+  Line: 4
+    pylint: import-error / Unable to import 'elasticsearch'
+  Line: 63
+    pylint: unused-variable / Unused variable 'res' (col 8)
+  Line: 65
+    pylint: unused-variable / Unused variable 'e' (col 4)
+  Line: 66
+    pylint: import-outside-toplevel / Import outside toplevel (traceback) (col 8)
+
+core/emailer/user_activity.py
+  Line: 28
+    pylint: unused-argument / Unused argument 'article_url' (col 45)
+  Line: 30
+    pylint: import-outside-toplevel / Import outside toplevel (datetime.datetime) (col 4)
+
+core/emailer/zeeguu_mailer.py
+  Line: 1
+    pylint: unused-import / Unused SMTP imported from smtplib
+  Line: 3
+    pylint: import-error / Unable to import 'yagmail'
+  Line: 8
+    pylint: useless-object-inheritance / Class 'ZeeguuMailer' inherits from object, can be safely removed from bases in python3
+  Line: 34
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 12)
+  Line: 39
+    pylint: import-outside-toplevel / Import outside toplevel (email.mime.text.MIMEText) (col 8)
+
+core/feed_handler/feed_handler.py
+  Line: 1
+    pylint: unused-import / Unused timezone imported from datetime
+  Line: 14
+    pylint: unidiomatic-typecheck / Use isinstance() rather than type() for a typecheck. (col 11)
+  Line: 18
+    pylint: no-method-argument / Method 'extract_feed_metadata' has no argument (col 4)
+  Line: 23
+    pylint: pointless-statement / Statement seems to have no effect (col 8)
+  Line: 35
+    pylint: pointless-statement / Statement seems to have no effect (col 8)
+
+core/feed_handler/newspaperfeed.py
+  Line: 1
+    pylint: import-error / Unable to import 'newspaper'
+  Line: 13
+    pylint: unused-argument / Unused argument 'is_stored_db' (col 8)
+  Line: 19
+    pylint: arguments-differ / Number of parameters was 0 in 'FeedHandler.extract_feed_metadata' and is now 1 in overriding 'NewspaperFeed.extract_feed_metadata' method (col 4)
+  Line: 52
+    pylint: use-dict-literal / Consider using '{"title": article.title, "url": article.url, "content": article.text, ... }' instead of a call to 'dict'. (col 33)
+
+core/feed_handler/rssfeed.py
+  Line: 1
+    pylint: import-error / Unable to import 'feedparser'
+  Line: 13
+    pylint: arguments-differ / Number of parameters was 0 in 'FeedHandler.extract_feed_metadata' and is now 1 in overriding 'RSSFeed.extract_feed_metadata' method (col 4)
+  Line: 18
+    pylint: bare-except / No exception type(s) specified (col 8)
+  Line: 22
+    pylint: bare-except / No exception type(s) specified (col 8)
+  Line: 31
+    pylint: bare-except / No exception type(s) specified (col 8)
+  Line: 62
+    pylint: use-dict-literal / Consider using '{"title": item.get('title', ''), "url": item.get('link', ''), "content": item.get('content', ''), ... }' instead of a call to 'dict'. (col 37)
+  Line: 70
+    pylint: unused-variable / Unused variable 'e' (col 8)
+  Line: 72
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_message) (col 12)
+
+core/language/difficulty_estimator_strategy.py
+  Line: 39
+    pylint: unnecessary-pass / Unnecessary pass statement (col 8)
+
+core/language/services/lingo_rank_service.py
+  Line: 5
+    pylint: missing-timeout / Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely (col 10)
+
+core/language/strategies/cognacy_difficulty_estimator.py
+  Line: 1
+    pylint: import-error / Unable to import 'numpy'
+  Line: 2
+    pylint: import-error / Unable to import 'wordstats'
+    pylint: unused-import / Unused WordInfo imported from wordstats
+  Line: 6
+    pylint: unused-import / Unused UserWord imported from zeeguu.core.model
+  Line: 7
+    pylint: import-error / Unable to import 'nltk.stem'
+  Line: 8
+    pylint: import-error / Unable to import 'wordstats.cognate_evaluation'
+  Line: 9
+    pylint: import-error / Unable to import 'wordstats.edit_distance'
+  Line: 10
+    pylint: unused-import / Unused defaultdict imported from collections
+  Line: 12
+    pylint: unused-import / Unused WIH_READ_CLICKED imported from zeeguu.core.constants
+  Line: 21
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 25)
+  Line: 44
+    pylint: consider-using-set-comprehension / Consider using a set comprehension (col 24)
+  Line: 51
+    pylint: arguments-differ / Number of parameters was 4 in 'DifficultyEstimatorStrategy.estimate_difficulty' and is now 2 in overriding 'CognacyDifficultyEstimator.estimate_difficulty' method (col 4)
+  Line: 75
+    pylint: use-dict-literal / Consider using '{"median": 1.0, "median_unique": 1.0, "normalized": 1.0, "discrete": 'HARD', ... }' instead of a call to 'dict'. (col 32)
+  Line: 88
+    pylint: consider-using-generator / Consider using a generator instead 'sum(word_frequency[w] for w in word_scores_median)' (col 33)
+  Line: 90
+    pylint: use-dict-literal / Consider using '{"median": sum([s * word_frequency[w] for (w, s) in word_scores_median.items()]) / total_words_median, ... }' instead of a call to 'dict'. (col 32)
+  Line: 91
+    pylint: consider-using-generator / Consider using a generator instead 'sum(s * word_frequency[w] for (w, s) in word_scores_median.items())' (col 23)
+  Line: 93
+    pylint: consider-using-generator / Consider using a generator instead 'sum(s * word_frequency[w] for (w, s) in word_scores.items())' (col 27)
+  Line: 139
+    pylint: trailing-newlines / Trailing newlines
+
+core/language/strategies/cognacy_wh_difficulty_estimator.py
+  Line: 1
+    pylint: import-error / Unable to import 'numpy'
+  Line: 2
+    pylint: import-error / Unable to import 'wordstats'
+    pylint: unused-import / Unused WordInfo imported from wordstats
+  Line: 6
+    pylint: unused-import / Unused UserWord imported from zeeguu.core.model
+  Line: 7
+    pylint: import-error / Unable to import 'nltk.stem'
+  Line: 8
+    pylint: import-error / Unable to import 'wordstats.cognate_evaluation'
+  Line: 9
+    pylint: import-error / Unable to import 'wordstats.edit_distance'
+  Line: 10
+    pylint: unused-import / Unused defaultdict imported from collections
+  Line: 23
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 25)
+  Line: 36
+    pylint: too-many-arguments / Too many arguments (7/5) (col 4)
+    pylint: too-many-locals / Too many local variables (26/15) (col 4)
+  Line: 56
+    pylint: consider-using-set-comprehension / Consider using a set comprehension (col 24)
+  Line: 84
+    pylint: consider-using-generator / Consider using a generator instead 'sum(event.event_type == WIH_READ_NOT_CLICKED_IN_SENTENCE for event in e)' (col 33)
+  Line: 85
+    pylint: consider-using-generator / Consider using a generator instead 'sum(event.event_type == WIH_READ_NOT_CLICKED_OUT_SENTENCE for event in e)' (col 25)
+  Line: 98
+    pylint: undefined-variable / Undefined variable 'WIH_WRONG_EX_RECOGNIZE' (col 184)
+    pycodestyle: E501 / line too long (211 > 159 characters) (col 160)
+  Line: 111
+    pylint: arguments-differ / Number of parameters was 4 in 'DifficultyEstimatorStrategy.estimate_difficulty' and is now 2 in overriding 'CognacyWordHistoryDifficultyEstimator.estimate_difficulty' method (col 4)
+  Line: 136
+    pylint: use-dict-literal / Consider using '{"median": 1.0, "median_unique": 1.0, "normalized": 1.0, "discrete": 'HARD', ... }' instead of a call to 'dict'. (col 32)
+  Line: 148
+    pylint: consider-using-generator / Consider using a generator instead 'sum(word_frequency[w] for w in word_scores_median)' (col 33)
+  Line: 150
+    pylint: use-dict-literal / Consider using '{"median": sum([s * word_frequency[w] for (w, s) in word_scores_median.items()]) / total_words_median, ... }' instead of a call to 'dict'. (col 28)
+  Line: 151
+    pylint: consider-using-generator / Consider using a generator instead 'sum(s * word_frequency[w] for (w, s) in word_scores_median.items())' (col 19)
+  Line: 153
+    pylint: consider-using-generator / Consider using a generator instead 'sum(s * word_frequency[w] for (w, s) in word_scores.items())' (col 23)
+  Line: 202
+    pylint: trailing-newlines / Trailing newlines
+
+core/language/strategies/default_difficulty_estimator.py
+  Line: 20
+    pylint: use-dict-literal / Consider using '{"normalized": 0.0, "discrete": 'EASY'}' instead of a call to 'dict'. (col 28)
+
+core/language/strategies/flesch_kincaid_difficulty_estimator.py
+  Line: 1
+    pylint: import-error / Unable to import 'nltk'
+  Line: 2
+    pylint: import-error / Unable to import 'pyphen'
+  Line: 3
+    pylint: import-error / Unable to import 'numpy'
+  Line: 23
+    pyflakes: F821 / undefined name 'User' (col 73)
+  Line: 36
+    pylint: use-dict-literal / Consider using '{"normalized": cls.normalize_difficulty(flesch_kincaid_index), "discrete": cls.discrete_difficulty(flesch_kincaid_index), ... }' instead of a call to 'dict'. (col 28)
+  Line: 72
+    pyflakes: F821 / undefined name 'language' (col 51)
+  Line: 73
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 8)
+  Line: 91
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 8)
+  Line: 106
+    pylint: no-else-return / Unnecessary "elif" after "return", remove the leading "el" from "elif" (col 8)
+  Line: 115
+    pylint: no-else-return / Unnecessary "elif" after "return", remove the leading "el" from "elif" (col 8)
+  Line: 124
+    pylint: no-else-return / Unnecessary "elif" after "return", remove the leading "el" from "elif" (col 8)
+
+core/language/strategies/frequency_difficulty_estimator.py
+  Line: 1
+    pylint: import-error / Unable to import 'nltk'
+  Line: 2
+    pylint: import-error / Unable to import 'wordstats'
+    pylint: unused-import / Unused Word imported from wordstats
+  Line: 6
+    pylint: import-error / Unable to import 'wordstats.file_handling.loading_from_hermit'
+  Line: 15
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 25)
+  Line: 38
+    pyflakes: F405 / 'load_language_from_hermit' may be undefined, or defined from star imports: wordstats.file_handling.loading_from_hermit (col 21)
+    pylint: undefined-variable / Undefined variable 'load_language_from_hermit' (col 20)
+  Line: 40
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 20)
+  Line: 60
+    pylint: arguments-differ / Number of parameters was 4 in 'DifficultyEstimatorStrategy.estimate_difficulty' and is now 2 in overriding 'FrequencyDifficultyEstimator.estimate_difficulty' method (col 4)
+  Line: 83
+    pylint: consider-using-dict-items / Consider iterating with .items()
+  Line: 89
+    pylint: unused-variable / Unused variable 'words_new' (col 12)
+  Line: 100
+    pylint: use-dict-literal / Consider using '{"normalized": normalized_estimate, "discrete": discrete_difficulty, ... }' instead of a call to 'dict'. (col 28)
+  Line: 146
+    pylint: trailing-newlines / Trailing newlines
+
+core/language/strategies/word_history_difficulty_estimator.py
+  Line: 1
+    pylint: import-error / Unable to import 'numpy'
+  Line: 2
+    pylint: import-error / Unable to import 'wordstats'
+    pylint: unused-import / Unused WordInfo imported from wordstats
+  Line: 6
+    pylint: import-error / Unable to import 'nltk.stem'
+  Line: 7
+    pylint: unused-import / Unused defaultdict imported from collections
+  Line: 20
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 25)
+  Line: 37
+    pylint: undefined-variable / Undefined variable 'WordInteractionHistory' (col 24)
+  Line: 61
+    pylint: undefined-variable / Undefined variable 'WordInteractionHistory' (col 24)
+  Line: 92
+    pylint: undefined-variable / Undefined variable 'WordInteractionHistory' (col 24)
+  Line: 105
+    pylint: consider-using-generator / Consider using a generator instead 'sum(event == WIH_READ_NOT_CLICKED_IN_SENTENCE for event in event_history)' (col 37)
+  Line: 106
+    pylint: consider-using-generator / Consider using a generator instead 'sum(event == WIH_READ_NOT_CLICKED_OUT_SENTENCE for event in event_history)' (col 29)
+  Line: 130
+    pylint: too-many-arguments / Too many arguments (7/5) (col 4)
+    pylint: too-many-locals / Too many local variables (20/15) (col 4)
+  Line: 144
+    pylint: undefined-variable / Undefined variable 'WordInteractionHistory' (col 24)
+  Line: 160
+    pylint: consider-using-generator / Consider using a generator instead 'sum(event.event_type == WIH_READ_NOT_CLICKED_IN_SENTENCE for event in e)' (col 33)
+  Line: 161
+    pylint: consider-using-generator / Consider using a generator instead 'sum(event.event_type == WIH_READ_NOT_CLICKED_OUT_SENTENCE for event in e)' (col 25)
+  Line: 174
+    pycodestyle: E501 / line too long (211 > 159 characters) (col 160)
+  Line: 183
+    pylint: arguments-differ / Number of parameters was 4 in 'DifficultyEstimatorStrategy.estimate_difficulty' and is now 2 in overriding 'WordHistoryDifficultyEstimator.estimate_difficulty' method (col 4)
+  Line: 207
+    pylint: use-dict-literal / Consider using '{"median": 1.0, "median_unique": 1.0, "normalized": 1.0, "discrete": 'HARD', ... }' instead of a call to 'dict'. (col 32)
+  Line: 220
+    pylint: consider-using-generator / Consider using a generator instead 'sum(word_frequency[w] for w in word_scores_median)' (col 33)
+  Line: 224
+    pylint: use-dict-literal / Consider using '{"median": sum([s * word_frequency[w] for (w, s) in word_scores_median.items()]) / total_words_median, ... }' instead of a call to 'dict'. (col 32)
+  Line: 225
+    pylint: consider-using-generator / Consider using a generator instead 'sum(s * word_frequency[w] for (w, s) in word_scores_median.items())' (col 23)
+  Line: 227
+    pylint: consider-using-generator / Consider using a generator instead 'sum(s * word_frequency[w] for (w, s) in word_scores.items())' (col 27)
+
+core/language/strategies/word_rank_difficulty_estimator.py
+  Line: 5
+    pylint: import-error / Unable to import 'nltk'
+  Line: 6
+    pylint: unused-import / Unused import math
+  Line: 8
+    pylint: import-error / Unable to import 'wordstats'
+  Line: 9
+    pylint: import-error / Unable to import 'textblob'
+  Line: 35
+    pylint: use-dict-literal / Consider using '{"normalized": cls.normalize_difficulty(word_rank_score), "discrete": cls.discrete_difficulty(word_rank_score), ... }' instead of a call to 'dict'. (col 28)
+    pylint: unused-variable / Unused variable 'difficulty_scores' (col 8)
+  Line: 43
+    pylint: too-many-locals / Too many local variables (16/15) (col 4)
+  Line: 49
+    pylint: comparison-of-constants / Comparison between constants: '1 == 0' has a constant value (col 11)
+  Line: 63
+    pycodestyle: W605 / invalid escape sequence '\d' (col 49)
+    pylint: singleton-comparison / Comparison 're.search('\\d', w) == None' should be 're.search('\\d', w) is None' (col 37)
+  Line: 67
+    pylint: consider-using-enumerate / Consider using enumerate instead of iterating with range and len (col 8)
+  Line: 72
+    pylint: bare-except / No exception type(s) specified (col 12)
+  Line: 82
+    pylint: unused-variable / Unused variable 'number_of_sentences' (col 8)
+  Line: 84
+    pylint: unused-variable / Unused variable 'constants' (col 8)
+  Line: 89
+    pyflakes: F632 / use ==/!= to compare constant literals (str, bytes, int, float, tuple) (col 61)
+    pylint: literal-comparison / In 'w.frequency is not 0', use '!=' when comparing constant literals not 'is not' ('w.frequency != 0') (col 60)
+  Line: 98
+    pylint: unused-argument / Unused argument 'language' (col 40)
+  Line: 106
+    pylint: no-else-return / Unnecessary "elif" after "return", remove the leading "el" from "elif" (col 8)
+  Line: 115
+    pylint: no-else-return / Unnecessary "elif" after "return", remove the leading "el" from "elif" (col 8)
+
+core/ml_models/__init__.py
+  Line: 1
+    pyflakes: F401 / '.paywall_detector.is_paywalled' imported but unused (col 1)
+  Line: 7
+    pylint: trailing-newlines / Trailing newlines
+
+core/ml_models/paywall_detector.py
+  Line: 3
+    pylint: import-error / Unable to import 'langdetect'
+  Line: 5
+    pylint: import-error / Unable to import 'joblib'
+
+core/ml_models/utils.py
+  Line: 2
+    pylint: import-error / Unable to import 'nltk.stem'
+  Line: 18
+    pylint: trailing-newlines / Trailing newlines
+
+core/model/__init__.py
+  Line: 1
+    pylint: import-error / Unable to import 'flask_sqlalchemy'
+  Line: 5
+    pylint: wrong-import-position / Import "import zeeguu" should be placed at the top of the module
+    pyflakes: F401 / 'zeeguu' imported but unused (col 1)
+  Line: 27
+    pylint: wrong-import-position / Import "from .language import Language" should be placed at the top of the module
+    pyflakes: F401 / '.language.Language' imported but unused (col 1)
+  Line: 28
+    pylint: wrong-import-position / Import "from .url import Url" should be placed at the top of the module
+    pyflakes: F401 / '.url.Url' imported but unused (col 1)
+  Line: 29
+    pylint: wrong-import-position / Import "from .domain_name import DomainName" should be placed at the top of the module
+    pyflakes: F401 / '.domain_name.DomainName' imported but unused (col 1)
+  Line: 30
+    pylint: wrong-import-position / Import "from .article import Article" should be placed at the top of the module
+    pyflakes: F401 / '.article.Article' imported but unused (col 1)
+  Line: 31
+    pylint: wrong-import-position / Import "from .bookmark import Bookmark" should be placed at the top of the module
+    pyflakes: F401 / '.bookmark.Bookmark' imported but unused (col 1)
+  Line: 32
+    pylint: wrong-import-position / Import "from .text import Text" should be placed at the top of the module
+    pyflakes: F401 / '.text.Text' imported but unused (col 1)
+  Line: 33
+    pylint: wrong-import-position / Import "from .user import User" should be placed at the top of the module
+    pyflakes: F401 / '.user.User' imported but unused (col 1)
+  Line: 34
+    pylint: wrong-import-position / Import "from .user_word import UserWord" should be placed at the top of the module
+    pyflakes: F401 / '.user_word.UserWord' imported but unused (col 1)
+  Line: 35
+    pylint: wrong-import-position / Import "from .user_preference import UserPreference" should be placed at the top of the module
+    pyflakes: F401 / '.user_preference.UserPreference' imported but unused (col 1)
+  Line: 36
+    pylint: wrong-import-position / Import "from .session import Session" should be placed at the top of the module
+    pyflakes: F401 / '.session.Session' imported but unused (col 1)
+  Line: 37
+    pylint: wrong-import-position / Import "from .unique_code import UniqueCode" should be placed at the top of the module
+    pyflakes: F401 / '.unique_code.UniqueCode' imported but unused (col 1)
+  Line: 39
+    pylint: wrong-import-position / Import "from .user_language import UserLanguage" should be placed at the top of the module
+    pyflakes: F401 / '.user_language.UserLanguage' imported but unused (col 1)
+  Line: 41
+    pylint: wrong-import-position / Import "from .topic import Topic" should be placed at the top of the module
+  Line: 42
+    pylint: wrong-import-position / Import "from .user_article import UserArticle" should be placed at the top of the module
+    pyflakes: F401 / '.user_article.UserArticle' imported but unused (col 1)
+  Line: 43
+    pylint: wrong-import-position / Import "from .article_difficulty_feedback import ArticleDifficultyFeedback" should be placed at the top of the module
+    pyflakes: F401 / '.article_difficulty_feedback.ArticleDifficultyFeedback' imported but unused (col 1)
+  Line: 45
+    pylint: wrong-import-position / Import "from .feed import Feed" should be placed at the top of the module
+    pyflakes: F401 / '.feed.Feed' imported but unused (col 1)
+  Line: 47
+    pylint: reimported / Reimport 'Topic' (imported line 41)
+    pylint: wrong-import-position / Import "from .topic import Topic" should be placed at the top of the module
+    pyflakes: F401 / '.topic.Topic' imported but unused (col 1)
+    pyflakes: F811 / redefinition of unused 'Topic' from line 41 (col 1)
+  Line: 48
+    pylint: wrong-import-position / Import "from .topic_subscription import TopicSubscription" should be placed at the top of the module
+    pyflakes: F401 / '.topic_subscription.TopicSubscription' imported but unused (col 1)
+  Line: 49
+    pylint: wrong-import-position / Import "from .topic_filter import TopicFilter" should be placed at the top of the module
+    pyflakes: F401 / '.topic_filter.TopicFilter' imported but unused (col 1)
+  Line: 50
+    pylint: wrong-import-position / Import "from .localized_topic import LocalizedTopic" should be placed at the top of the module
+    pyflakes: F401 / '.localized_topic.LocalizedTopic' imported but unused (col 1)
+  Line: 52
+    pylint: wrong-import-position / Import "from .search import Search" should be placed at the top of the module
+    pyflakes: F401 / '.search.Search' imported but unused (col 1)
+  Line: 53
+    pylint: wrong-import-position / Import "from .search_filter import SearchFilter" should be placed at the top of the module
+    pyflakes: F401 / '.search_filter.SearchFilter' imported but unused (col 1)
+  Line: 54
+    pylint: wrong-import-position / Import "from .search_subscription import SearchSubscription" should be placed at the top of the module
+    pyflakes: F401 / '.search_subscription.SearchSubscription' imported but unused (col 1)
+  Line: 57
+    pylint: wrong-import-position / Import "from .exercise import Exercise" should be placed at the top of the module
+    pyflakes: F401 / '.exercise.Exercise' imported but unused (col 1)
+  Line: 58
+    pylint: wrong-import-position / Import "from .exercise_outcome import ExerciseOutcome" should be placed at the top of the module
+    pyflakes: F401 / '.exercise_outcome.ExerciseOutcome' imported but unused (col 1)
+  Line: 59
+    pylint: wrong-import-position / Import "from .exercise_source import ExerciseSource" should be placed at the top of the module
+    pyflakes: F401 / '.exercise_source.ExerciseSource' imported but unused (col 1)
+  Line: 62
+    pylint: wrong-import-position / Import "from .user_activitiy_data import UserActivityData" should be placed at the top of the module
+    pyflakes: F401 / '.user_activitiy_data.UserActivityData' imported but unused (col 1)
+  Line: 65
+    pylint: wrong-import-position / Import "from .cohort import Cohort" should be placed at the top of the module
+    pyflakes: F401 / '.cohort.Cohort' imported but unused (col 1)
+  Line: 66
+    pylint: wrong-import-position / Import "from .teacher_cohort_map import TeacherCohortMap" should be placed at the top of the module
+    pyflakes: F401 / '.teacher_cohort_map.TeacherCohortMap' imported but unused (col 1)
+  Line: 67
+    pylint: wrong-import-position / Import "from .teacher import Teacher" should be placed at the top of the module
+    pyflakes: F401 / '.teacher.Teacher' imported but unused (col 1)
+  Line: 68
+    pylint: wrong-import-position / Import "from .cohort_article_map import CohortArticleMap" should be placed at the top of the module
+    pyflakes: F401 / '.cohort_article_map.CohortArticleMap' imported but unused (col 1)
+  Line: 70
+    pylint: wrong-import-position / Import "from .user_reading_session import UserReadingSession" should be placed at the top of the module
+    pyflakes: F401 / '.user_reading_session.UserReadingSession' imported but unused (col 1)
+  Line: 71
+    pylint: wrong-import-position / Import "from .user_exercise_session import UserExerciseSession" should be placed at the top of the module
+    pyflakes: F401 / '.user_exercise_session.UserExerciseSession' imported but unused (col 1)
+  Line: 74
+    pylint: wrong-import-position / Import "from .word_to_study import WordToStudy" should be placed at the top of the module
+    pyflakes: F401 / '.word_to_study.WordToStudy' imported but unused (col 1)
+  Line: 75
+    pylint: wrong-import-position / Import "from ..word_scheduling.basicSR.basicSR import BasicSRSchedule" should be placed at the top of the module
+    pyflakes: F401 / '..word_scheduling.basicSR.basicSR.BasicSRSchedule' imported but unused (col 1)
+  Line: 77
+    pylint: wrong-import-position / Import "from .personal_copy import PersonalCopy" should be placed at the top of the module
+    pyflakes: F401 / '.personal_copy.PersonalCopy' imported but unused (col 1)
+  Line: 79
+    pylint: wrong-import-position / Import "from .difficulty_lingo_rank import DifficultyLingoRank" should be placed at the top of the module
+    pyflakes: F401 / '.difficulty_lingo_rank.DifficultyLingoRank' imported but unused (col 1)
+
+core/model/article.py
+  Line: 6
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 7
+    pylint: import-error / Unable to import 'langdetect'
+  Line: 8
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 9
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 10
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 28
+    pycodestyle: W605 / invalid escape sequence '\s' (col 35)
+  Line: 55
+    pycodestyle: N815 / variable 'htmlContent' in class scope should not be mixedCase (col 6)
+  Line: 64
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.url.Url) (col 4)
+  Line: 66
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.feed.Feed) (col 4)
+  Line: 68
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.language.Language) (col 4)
+  Line: 81
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.user.User) (col 4)
+  Line: 86
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.topic.Topic) (col 4)
+  Line: 98
+    pylint: too-many-arguments / Too many arguments (16/5) (col 4)
+    pylint: too-many-locals / Too many local variables (16/15) (col 4)
+  Line: 200
+    pylint: use-dict-literal / Consider using '{"id": self.id, "title": self.title, "summary": summary, "language": self.language.code, ... }' instead of a call to 'dict'. (col 22)
+  Line: 207
+    pylint: use-dict-literal / Consider using '{"difficulty": self.fk_difficulty / 100, "word_count": self.word_count, ... }' instead of a call to 'dict'. (col 20)
+  Line: 241
+    pylint: simplifiable-if-expression / The if expression can be replaced with 'bool(test)' (col 38)
+  Line: 246
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.CohortArticleMap) (col 8)
+  Line: 267
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.user_article.UserArticle) (col 8)
+  Line: 276
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.elastic.indexing.remove_from_index) (col 8)
+  Line: 281
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.content_retriever.download_and_parse) (col 8)
+  Line: 288
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.content_quality.quality_filter.sufficient_quality_plain_text) (col 8)
+  Line: 335
+    pylint: too-many-arguments / Too many arguments (7/5) (col 4)
+  Line: 358
+    pylint: inconsistent-return-statements / Either all return statements in a function should return an expression, or none of them should. (col 4)
+    pylint: too-many-arguments / Too many arguments (6/5) (col 4)
+    pylint: too-many-locals / Too many local variables (21/15) (col 4)
+  Line: 374
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Url, zeeguu.core.model.Article, zeeguu.core.model.Language) (col 8)
+  Line: 401
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.content_retriever.download_and_parse) (col 16)
+  Line: 432
+    pylint: binary-op-exception / Exception to catch is the result of a binary "or" operation (col 8)
+  Line: 439
+    pylint: bare-except / No exception type(s) specified (col 16)
+  Line: 446
+    pylint: redefined-builtin / Redefining built-in 'id' (col 24)
+  Line: 462
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Url) (col 8)
+  Line: 472
+    pylint: import-outside-toplevel / Import outside toplevel (datetime) (col 8)
+    pylint: reimported / Reimport 'datetime' (imported line 3) (col 8)
+  Line: 484
+    pylint: import-outside-toplevel / Import outside toplevel (datetime) (col 8)
+    pylint: reimported / Reimport 'datetime' (imported line 3) (col 8)
+
+core/model/article_difficulty_feedback.py
+  Line: 3
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 4
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 5
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 6
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 56
+    pylint: too-many-arguments / Too many arguments (6/5) (col 4)
+  Line: 69
+    pylint: import-error / Unable to import 'sentry_sdk' (col 16)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 16)
+
+core/model/bookmark.py
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 4
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 5
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 6
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 7
+    pylint: import-error / Unable to import 'wordstats'
+  Line: 24
+    pylint: unused-import / Unused import zeeguu
+  Line: 75
+    pylint: too-many-arguments / Too many arguments (7/5) (col 4)
+  Line: 95
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 15)
+  Line: 104
+    pylint: use-dict-literal / Consider using '{"origin": self.origin.word, "translation": self.translation.word}' instead of a call to 'dict'. (col 15)
+  Line: 138
+    pylint: too-many-arguments / Too many arguments (6/5) (col 4)
+  Line: 160
+    pylint: too-many-arguments / Too many arguments (7/5) (col 4)
+  Line: 180
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.word_scheduling.basicSR.basicSR.BasicSRSchedule) (col 8)
+  Line: 188
+    pylint: too-many-locals / Too many local variables (17/15) (col 4)
+  Line: 207
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.BasicSRSchedule) (col 8)
+  Line: 208
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.word_scheduling.basicSR.basicSR.MAX_INTERVAL_8_DAY, zeeguu.core.word_scheduling.basicSR.basicSR.ONE_DAY) (col 8)
+  Line: 226
+    pylint: import-error / Unable to import 'sentry_sdk' (col 16)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 16)
+  Line: 231
+    pylint: use-dict-literal / Consider using '{"id": self.id, "to": translation_word, "from_lang": self.origin.language.code, ... }' instead of a call to 'dict'. (col 17)
+  Line: 297
+    pylint: unused-variable / Unused variable 'e' (col 8)
+
+core/model/cohort.py
+  Line: 1
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 22
+    pylint: too-many-arguments / Too many arguments (7/5) (col 4)
+  Line: 34
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.user.User) (col 8)
+  Line: 47
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.user.User) (col 8)
+  Line: 64
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.teacher_cohort_map.TeacherCohortMap) (col 8)
+  Line: 69
+    pylint: redefined-builtin / Redefining built-in 'id' (col 18)
+
+core/model/cohort_article_map.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+
+core/model/difficulty_lingo_rank.py
+  Line: 1
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 4
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 14
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.article.Article) (col 4)
+
+core/model/domain_name.py
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 4
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+    pylint: unused-import / Unused NoResultFound imported from sqlalchemy.orm.exc
+  Line: 9
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 35
+    pylint: unused-variable / Unused variable 'path_re' (col 8)
+  Line: 54
+    pylint: inconsistent-return-statements / Either all return statements in a function should return an expression, or none of them should. (col 4)
+  Line: 58
+    pylint: binary-op-exception / Exception to catch is the result of a binary "or" operation (col 8)
+  Line: 65
+    pylint: binary-op-exception / Exception to catch is the result of a binary "or" operation (col 12)
+  Line: 73
+    pylint: bare-except / No exception type(s) specified (col 20)
+  Line: 74
+    pylint: logging-not-lazy / Use lazy % formatting in logging functions (col 24)
+
+core/model/exercise.py
+  Line: 1
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 28
+    pylint: too-many-arguments / Too many arguments (7/5) (col 4)
+  Line: 55
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.bookmark.Bookmark, zeeguu.core.model.bookmark.bookmark_exercise_mapping) (col 8)
+  Line: 74
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.bookmark.Bookmark) (col 8)
+  Line: 75
+    pylint: import-error / Unable to import 'sqlalchemy' (col 8)
+    pylint: import-outside-toplevel / Import outside toplevel (sqlalchemy) (col 8)
+  Line: 86
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.bookmark.Bookmark, zeeguu.core.model.bookmark.bookmark_exercise_mapping) (col 8)
+
+core/model/exercise_outcome.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 2
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 38
+    pylint: function-redefined / method already defined line 13 (col 4)
+  Line: 70
+    pylint: unused-variable / Unused variable 'e' (col 8)
+
+core/model/exercise_source.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 3
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 32
+    pylint: unused-variable / Unused variable 'e' (col 8)
+
+core/model/feed.py
+  Line: 5
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 6
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 13
+    pylint: unused-import / Unused import zeeguu
+  Line: 46
+    pylint: too-many-arguments / Too many arguments (9/5) (col 4)
+  Line: 84
+    pylint: unused-variable / Unused variable 'e' (col 8)
+  Line: 106
+    pylint: use-dict-literal / Consider using '{"id": self.id, "title": self.title, "url": self.url.as_string(), "description": self.description, ... }' instead of a call to 'dict'. (col 15)
+  Line: 168
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 8)
+  Line: 180
+    pylint: import-outside-toplevel / Import outside toplevel (traceback) (col 12)
+  Line: 183
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 12)
+  Line: 197
+    pylint: too-many-arguments / Too many arguments (8/5) (col 4)
+  Line: 251
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Article) (col 8)
+  Line: 273
+    pylint: unreachable / Unreachable code (col 12)
+
+core/model/language.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 6
+    pylint: unused-import / Unused import zeeguu
+  Line: 102
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 15)
+  Line: 109
+    pylint: use-dict-literal / Consider using '{"id": self.id, "code": self.code, "language": self.name}' instead of a call to 'dict'. (col 15)
+  Line: 169
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Article) (col 8)
+  Line: 206
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Article) (col 8)
+  Line: 228
+    pylint: unreachable / Unreachable code (col 12)
+
+core/model/learning_cycle.py
+  Line: 1
+    pylint: useless-object-inheritance / Class 'LearningCycle' inherits from object, can be safely removed from bases in python3
+
+core/model/localized_topic.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 3
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 5
+    pylint: import-error / Unable to import 'sqlalchemy'
+    pylint: unused-import / Unused and_ imported from sqlalchemy
+  Line: 23
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.topic.Topic) (col 4)
+  Line: 28
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.language.Language) (col 4)
+  Line: 64
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Article) (col 8)
+
+core/model/personal_copy.py
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 4
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 6
+    pylint: unused-import / Unused import zeeguu
+
+core/model/search.py
+  Line: 1
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 32
+    pylint: use-dict-literal / Consider using '{"id": self.id, "search": self.keywords}' instead of a call to 'dict'. (col 15)
+  Line: 38
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Article) (col 8)
+  Line: 54
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 12)
+  Line: 65
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 12)
+
+core/model/search_filter.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 5
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 7
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 30
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.search.Search) (col 4)
+  Line: 69
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 12)
+
+core/model/search_subscription.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 4
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 6
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 29
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.search.Search) (col 4)
+  Line: 68
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 12)
+
+core/model/session.py
+  Line: 4
+    pylint: import-error / Unable to import 'flask'
+    pylint: unused-import / Unused import flask
+  Line: 5
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 8
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 23
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 13)
+  Line: 42
+    pylint: redefined-builtin / Redefining built-in 'id' (col 18)
+
+core/model/sorted_exercise_log.py
+  Line: 4
+    pylint: useless-object-inheritance / Class 'SortedExerciseLog' inherits from object, can be safely removed from bases in python3
+  Line: 43
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 8)
+
+core/model/starred_article.py
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 5
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 14
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 61
+    pylint: use-dict-literal / Consider using '{"user_id": self.user_id, "url": self.url.as_string(), "title": self.title, ... }' instead of a call to 'dict'. (col 15)
+  Line: 78
+    pycodestyle: W605 / invalid escape sequence '\ ' (col 9)
+  Line: 92
+    pylint: import-error / Unable to import 'sentry_sdk' (col 16)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 16)
+  Line: 108
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 12)
+
+core/model/teacher.py
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 5
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 28
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 8)
+
+core/model/teacher_cohort_map.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 45
+    pylint: unused-variable / Unused variable 'e' (col 8)
+
+core/model/text.py
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 5
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 41
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 15)
+  Line: 47
+    pylint: method-hidden / An attribute defined in zeeguu.core.model.text line 36 hides this method (col 4)
+    pylint: function-redefined / method already defined line 28 (col 4)
+  Line: 92
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Bookmark) (col 8)
+  Line: 102
+    pylint: redefined-builtin / Redefining built-in 'hash' (col 8)
+  Line: 110
+    pylint: inconsistent-return-statements / Either all return statements in a function should return an expression, or none of them should. (col 4)
+    pylint: too-many-arguments / Too many arguments (6/5) (col 4)
+  Line: 129
+    pylint: binary-op-exception / Exception to catch is the result of a binary "or" operation (col 8)
+  Line: 135
+    pylint: binary-op-exception / Exception to catch is the result of a binary "or" operation (col 12)
+  Line: 144
+    pylint: bare-except / No exception type(s) specified (col 20)
+
+core/model/topic.py
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 5
+    pylint: unused-import / Unused import zeeguu
+  Line: 33
+    pylint: use-dict-literal / Consider using '{"id": self.id, "title": self.title}' instead of a call to 'dict'. (col 15)
+  Line: 40
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Article) (col 8)
+  Line: 71
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 12)
+  Line: 82
+    pylint: import-error / Unable to import 'sentry_sdk' (col 12)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 12)
+
+core/model/topic_filter.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 6
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 8
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 60
+    pylint: unused-argument / Unused argument 'user' (col 34)
+  Line: 61
+    pylint: unnecessary-comprehension / Unnecessary use of a comprehension, use list(cls.all_for_user()) instead. (col 15)
+    pylint: no-value-for-parameter / No value for argument 'user' in classmethod call (col 41)
+
+core/model/topic_subscription.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 6
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 8
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 61
+    pylint: unnecessary-comprehension / Unnecessary use of a comprehension, use list(cls.query.filter(cls.user == user).all()) instead. (col 15)
+
+core/model/unique_code.py
+  Line: 4
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 5
+    pylint: import-error / Unable to import 'sqlalchemy'
+
+core/model/url.py
+  Line: 2
+    pylint: unused-import / Unused urlparse imported from urllib.parse
+  Line: 3
+    pylint: unused-import / Unused urlopen imported from urllib.request
+  Line: 5
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 6
+    pylint: unused-import / Unused Request imported from requests
+  Line: 7
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 9
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 62
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 8)
+  Line: 74
+    pylint: unused-variable / Unused variable 'path_re' (col 8)
+  Line: 89
+    pylint: inconsistent-return-statements / Either all return statements in a function should return an expression, or none of them should. (col 4)
+    pyflakes: F821 / undefined name 'Session' (col 38)
+  Line: 96
+    pylint: binary-op-exception / Exception to catch is the result of a binary "or" operation (col 8)
+  Line: 102
+    pylint: binary-op-exception / Exception to catch is the result of a binary "or" operation (col 12)
+  Line: 122
+    pylint: import-error / Unable to import 'sentry_sdk' (col 24)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_message) (col 24)
+  Line: 132
+    pylint: unused-argument / Unused argument 'title' (col 23)
+  Line: 174
+    pylint: import-outside-toplevel / Import outside toplevel (urllib.parse.urlparse) (col 8)
+    pylint: reimported / Reimport 'urlparse' (imported line 2) (col 8)
+    pyflakes: F811 / redefinition of unused 'urlparse' from line 2 (col 9)
+
+core/model/user.py
+  Line: 7
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 9
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 10
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 11
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 51
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.cohort.Cohort) (col 4)
+  Line: 58
+    pylint: too-many-arguments / Too many arguments (9/5) (col 4)
+  Line: 97
+    pylint: unused-variable / Unused variable 'e' (col 12)
+  Line: 105
+    pyflakes: F841 / local variable 'e' is assigned to but never used (col 13)
+  Line: 121
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 15)
+  Line: 124
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.UserLanguage) (col 8)
+  Line: 126
+    pylint: use-dict-literal / Consider using '{"email": self.email, "name": self.name, "learned_language": self.learned_language.code, ... }' instead of a call to 'dict'. (col 17)
+  Line: 150
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.user_preference.UserPreference) (col 8)
+  Line: 174
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.UserLanguage) (col 8)
+  Line: 179
+    pycodestyle: E712 / comparison to True should be 'if cond is True:' or 'if cond:' (col 50)
+    pylint: singleton-comparison / Comparison 'UserLanguage.doing_exercises == True' should be 'UserLanguage.doing_exercises is True' if checking for the singleton value True, or 'bool(UserLanguage.doing_exercises)' if testing for truthiness (col 20)
+  Line: 197
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.UserLanguage) (col 8)
+  Line: 215
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.word_scheduling.basicSR.basicSR.BasicSRSchedule) (col 8)
+  Line: 221
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.sql.queries.query_loader.load_query) (col 8)
+  Line: 222
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.sql.query_building.list_of_dicts_from_query) (col 8)
+  Line: 223
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.bookmark.Bookmark) (col 8)
+  Line: 238
+    pylint: redefined-builtin / Redefining built-in 'id' (col 12)
+  Line: 259
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.word_scheduling.basicSR.basicSR.BasicSRSchedule) (col 8)
+  Line: 269
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.word_scheduling.basicSR.basicSR.BasicSRSchedule) (col 8)
+  Line: 279
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.word_scheduling.basicSR.basicSR.BasicSRSchedule) (col 8)
+  Line: 291
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.user_article.UserArticle) (col 8)
+  Line: 299
+    pylint: import-outside-toplevel / Import outside toplevel (dateutil.relativedelta) (col 8)
+  Line: 306
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Cohort, zeeguu.core.model.CohortArticleMap) (col 8)
+  Line: 312
+    pylint: unused-variable / Unused variable 'e' (col 8)
+  Line: 316
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Teacher) (col 8)
+  Line: 327
+    pylint: unused-argument / Unused argument 'col' (col 28)
+  Line: 336
+    pylint: unused-argument / Unused argument 'col' (col 31)
+  Line: 343
+    pylint: unused-argument / Unused argument 'col' (col 27)
+  Line: 367
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.user_reading_session.UserReadingSession) (col 8)
+  Line: 368
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.article.Article) (col 8)
+  Line: 393
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Bookmark, zeeguu.core.model.UserWord) (col 8)
+  Line: 399
+    pylint: singleton-comparison / Comparison 'language_id == None' should be 'language_id is None' (col 11)
+  Line: 412
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.bookmark.Bookmark) (col 8)
+  Line: 418
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.bookmark.Bookmark) (col 8)
+  Line: 424
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Bookmark, zeeguu.core.model.UserWord) (col 8)
+  Line: 431
+    pycodestyle: E712 / comparison to True should be 'if cond is True:' or 'if cond:' (col 38)
+    pylint: singleton-comparison / Comparison 'Bookmark.starred == True' should be 'Bookmark.starred is True' if checking for the singleton value True, or 'bool(Bookmark.starred)' if testing for truthiness (col 20)
+  Line: 436
+    pylint: unused-argument / Unused argument 'count' (col 32)
+  Line: 437
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Bookmark, zeeguu.core.model.UserWord) (col 8)
+  Line: 444
+    pycodestyle: E712 / comparison to True should be 'if cond is True:' or 'if cond:' (col 38)
+    pylint: singleton-comparison / Comparison 'Bookmark.learned == True' should be 'Bookmark.learned is True' if checking for the singleton value True, or 'bool(Bookmark.learned)' if testing for truthiness (col 20)
+  Line: 466
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 20)
+  Line: 488
+    pylint: use-dict-literal / Consider using '{"date": date.strftime('%A, %d %B %Y')}' instead of a call to 'dict'. (col 25)
+  Line: 497
+    pylint: redefined-builtin / Redefining built-in 'max' (col 56)
+  Line: 537
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 28)
+  Line: 546
+    pylint: too-many-arguments / Too many arguments (6/5) (col 4)
+  Line: 550
+    pylint: redefined-builtin / Redefining built-in 'max' (col 8)
+  Line: 569
+    pylint: too-many-arguments / Too many arguments (6/5) (col 4)
+  Line: 578
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Bookmark, zeeguu.core.model.Text) (col 8)
+  Line: 637
+    pylint: use-dict-literal / Consider using '{"date": the_date, "count": the_count}' instead of a call to 'dict'. (col 26)
+  Line: 648
+    pylint: import-outside-toplevel / Import outside toplevel (tools.compute_learner_stats) (col 8)
+  Line: 675
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.UserLanguage) (col 8)
+  Line: 737
+    pylint: redefined-builtin / Redefining built-in 'id' (col 24)
+  Line: 742
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.UserActivityData) (col 8)
+  Line: 748
+    pylint: consider-using-set-comprehension / Consider using a set comprehension (col 19)
+  Line: 762
+    pylint: inconsistent-return-statements / Either all return statements in a function should return an expression, or none of them should. (col 4)
+  Line: 779
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.user_preference.UserPreference) (col 8)
+
+core/model/user_activitiy_data.py
+  Line: 5
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 6
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 11
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 14
+    pylint: unused-import / Unused UserReadingSession imported from zeeguu.core.model.user_reading_session
+  Line: 20
+    pylint: unused-import / Unused import zeeguu
+  Line: 26
+    pylint: use-dict-literal / Consider using '{"mysql_collate": 'utf8_bin'}' instead of a call to 'dict'. (col 21)
+  Line: 55
+    pylint: too-many-arguments / Too many arguments (8/5) (col 4)
+  Line: 74
+    pylint: use-dict-literal / Consider using '{"user_id": self.user_id, "time": self.time.strftime('%Y-%m-%dT%H:%M:%S'), ... }' instead of a call to 'dict'. (col 15)
+  Line: 98
+    pycodestyle: E501 / line too long (272 > 159 characters) (col 160)
+  Line: 126
+    pylint: protected-access / Access to a protected member _extra_data_filter of a client class (col 30)
+  Line: 132
+    pylint: inconsistent-return-statements / Either all return statements in a function should return an expression, or none of them should. (col 4)
+    pylint: too-many-arguments / Too many arguments (9/5) (col 4)
+  Line: 177
+    pylint: too-many-arguments / Too many arguments (8/5) (col 4)
+  Line: 208
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 16)
+  Line: 214
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 12)
+  Line: 218
+    pylint: bare-except / No exception type(s) specified (col 8)
+  Line: 245
+    pylint: bare-except / No exception type(s) specified (col 12)
+
+core/model/user_article.py
+  Line: 2
+    pylint: unused-import / Unused import random
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 12
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 13
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 67
+    pylint: too-many-arguments / Too many arguments (6/5) (col 4)
+  Line: 130
+    pylint: too-many-arguments / Too many arguments (7/5) (col 4)
+  Line: 154
+    pylint: import-error / Unable to import 'sentry_sdk' (col 16)
+    pylint: import-outside-toplevel / Import outside toplevel (sentry_sdk.capture_exception) (col 16)
+  Line: 199
+    pylint: use-dict-literal / Consider using '{"user_id": each.user.id, "url": each.article.url.as_string(), "title": each.article.title, ... }' instead of a call to 'dict'. (col 12)
+  Line: 245
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.Bookmark) (col 8)
+
+core/model/user_exercise_session.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+    pylint: unused-import / Unused import sqlalchemy
+  Line: 2
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 4
+    pylint: unused-import / Unused timedelta imported from datetime
+  Line: 20
+    pylint: use-dict-literal / Consider using '{"mysql_collate": 'utf8_bin'}' instead of a call to 'dict'. (col 21)
+  Line: 50
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.sql.learner.exercises_history.exercises_in_session) (col 8)
+  Line: 84
+    pylint: redefined-builtin / Redefining built-in 'id' (col 24)
+
+core/model/user_language.py
+  Line: 1
+    pylint: import-error / Unable to import 'MySQLdb'
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 4
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 8
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 31
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.language.Language) (col 4)
+  Line: 47
+    pylint: too-many-arguments / Too many arguments (10/5) (col 4)
+
+core/model/user_preference.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 8
+    pylint: unused-import / Unused logp imported from zeeguu.logging
+  Line: 10
+    pylint: unused-import / Unused import zeeguu
+  Line: 65
+    pylint: too-many-function-args / Too many positional arguments for unbound method call (col 15)
+  Line: 69
+    pylint: too-many-function-args / Too many positional arguments for unbound method call (col 15)
+  Line: 105
+    pyflakes: F811 / redefinition of unused 'get' from line 52 (col 5)
+  Line: 115
+    pyflakes: F811 / redefinition of unused 'set' from line 49 (col 5)
+  Line: 132
+    pylint: inconsistent-return-statements / Either all return statements in a function should return an expression, or none of them should. (col 4)
+
+core/model/user_reading_session.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+    pylint: unused-import / Unused import sqlalchemy
+  Line: 2
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 4
+    pylint: unused-import / Unused timedelta imported from datetime
+  Line: 8
+    pylint: unused-wildcard-import / Unused imports from wildcard import: (s)
+  Line: 23
+    pylint: use-dict-literal / Consider using '{"mysql_collate": 'utf8_bin'}' instead of a call to 'dict'. (col 21)
+  Line: 61
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.UserActivityData) (col 8)
+  Line: 71
+    pyflakes: F405 / 'READING_SESSION_TIMEOUT' may be undefined, or defined from star imports: zeeguu.core.constants (col 16)
+  Line: 145
+    pylint: too-many-arguments / Too many arguments (6/5) (col 4)
+
+core/model/user_word.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy.orm'
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 3
+    pylint: import-error / Unable to import 'wordstats'
+  Line: 5
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 74
+    pylint: inconsistent-return-statements / Either all return statements in a function should return an expression, or none of them should. (col 4)
+  Line: 91
+    pylint: import-outside-toplevel / Import outside toplevel (time) (col 24)
+
+core/model/word_to_study.py
+  Line: 5
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 21
+    pycodestyle: N815 / variable 'nextDueDate' in class scope should not be mixedCase (col 6)
+  Line: 22
+    pycodestyle: N815 / variable 'coolingInterval' in class scope should not be mixedCase (col 6)
+  Line: 23
+    pycodestyle: N815 / variable 'consecutiveCorrects' in class scope should not be mixedCase (col 6)
+
+core/nlp_pipeline/__init__.py
+  Line: 4
+    pyflakes: F401 / '.reduce_context.ContextReducer' imported but unused (col 1)
+  Line: 5
+    pylint: import-error / Unable to import 'confusionwords'
+  Line: 6
+    pylint: import-error / Unable to import 'confusionwords'
+    pyflakes: F401 / 'confusionwords.ConfusionSets' imported but unused (col 1)
+
+core/nlp_pipeline/alignment_errant.py
+  Line: 2
+    pylint: import-error / Unable to import 'rapidfuzz.distance'
+  Line: 3
+    pylint: import-error / Unable to import 'spacy.parts_of_speech'
+  Line: 6
+    pylint: pointless-string-statement / String statement has no effect
+  Line: 31
+    pylint: too-many-locals / Too many local variables (17/15) (col 4)
+  Line: 50
+    pylint: too-many-nested-blocks / Too many nested blocks (6/5) (col 8)
+  Line: 80
+    pycodestyle: E741 / ambiguous variable name 'l' (col 21)
+  Line: 83
+    pycodestyle: E741 / ambiguous variable name 'l' (col 26)
+  Line: 84
+    pycodestyle: E741 / ambiguous variable name 'l' (col 26)
+  Line: 85
+    pycodestyle: E741 / ambiguous variable name 'l' (col 26)
+  Line: 154
+    pylint: simplifiable-if-expression / The if expression can be replaced with 'test' (col 26)
+  Line: 171
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 8)
+
+core/nlp_pipeline/automatic_gec_tagging.py
+  Line: 2
+    pylint: import-error / Unable to import 'regex'
+  Line: 3
+    pylint: import-error / Unable to import 'numpy'
+  Line: 5
+    pylint: import-error / Unable to import 'rapidfuzz.fuzz'
+  Line: 7
+    pylint: pointless-string-statement / String statement has no effect
+  Line: 144
+    pycodestyle: E501 / line too long (192 > 159 characters) (col 160)
+  Line: 145
+    pycodestyle: E501 / line too long (192 > 159 characters) (col 160)
+  Line: 157
+    pylint: too-many-locals / Too many local variables (16/15) (col 4)
+    mccabe: MC0001 / AutoGECTagging._merge_missing is too complex (21)
+  Line: 163
+    pycodestyle: E275 / missing whitespace after keyword (col 14)
+  Line: 220
+    pylint: too-many-arguments / Too many arguments (11/5) (col 4)
+    pylint: too-many-locals / Too many local variables (38/15) (col 4)
+    mccabe: MC0001 / AutoGECTagging.generate_labels is too complex (25)
+  Line: 234
+    pylint: unnecessary-comprehension / Unnecessary use of a comprehension, use list(doc_err) instead. (col 16)
+  Line: 235
+    pylint: unnecessary-comprehension / Unnecessary use of a comprehension, use list(doc_corr) instead. (col 14)
+  Line: 266
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 53)
+  Line: 275
+    pycodestyle: E129 / visually indented line with same indent as next logical line (col 21)
+  Line: 279
+    pylint: redefined-builtin / Redefining built-in 'property' (col 24)
+  Line: 281
+    pylint: no-else-continue / Unnecessary "elif" after "continue", remove the leading "el" from "elif" (col 24)
+  Line: 296
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 53)
+  Line: 319
+    pylint: too-many-locals / Too many local variables (36/15) (col 4)
+    mccabe: MC0001 / AutoGECTagging.anottate_clues is too complex (42)
+  Line: 327
+    pylint: unidiomatic-typecheck / Use isinstance() rather than type() for a typecheck. (col 11)
+  Line: 328
+    pylint: unidiomatic-typecheck / Use isinstance() rather than type() for a typecheck. (col 15)
+    pycodestyle: E501 / line too long (164 > 159 characters) (col 160)
+  Line: 329
+    pycodestyle: E306 / expected 1 blank line before a nested definition, found 0 (col 9)
+    pylint: too-many-arguments / Too many arguments (9/5) (col 8)
+    pylint: too-many-locals / Too many local variables (17/15) (col 8)
+    pylint: too-many-branches / Too many branches (16/15) (col 8)
+  Line: 330
+    pylint: unused-argument / Unused argument 'is_in_sentence' (col 28)
+  Line: 370
+    pylint: no-else-return / Unnecessary "elif" after "return", remove the leading "el" from "elif" (col 12)
+  Line: 386
+    pycodestyle: E501 / line too long (164 > 159 characters) (col 160)
+  Line: 401
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 32)
+  Line: 402
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 32)
+  Line: 412
+    pylint: unused-variable / Unused variable 'prev_is_wo' (col 12)
+  Line: 495
+    pycodestyle: E129 / visually indented line with same indent as next logical line (col 17)
+  Line: 522
+    pylint: pointless-statement / Statement seems to have no effect (col 58)
+    pylint: unnecessary-comprehension / Unnecessary use of a comprehension, use list(token_err.children) instead. (col 75)
+  Line: 548
+    pylint: simplifiable-if-expression / The if expression can be replaced with 'bool(test)' (col 35)
+
+core/nlp_pipeline/confusion_generator.py
+  Line: 1
+    pylint: import-error / Unable to import 'numpy'
+  Line: 22
+    pylint: dangerous-default-value / Dangerous default value NOISE_PROBABILITIES_DEFAULT (builtins.dict) as argument (col 4)
+    pylint: too-many-arguments / Too many arguments (7/5) (col 4)
+  Line: 70
+    pylint: too-many-locals / Too many local variables (25/15) (col 4)
+    mccabe: MC0001 / NoiseGenerator._conf_generate_confusion_words is too complex (26)
+  Line: 73
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 20)
+  Line: 88
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 26)
+  Line: 89
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 8)
+  Line: 90
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 30)
+  Line: 107
+    pylint: too-many-nested-blocks / Too many nested blocks (6/5) (col 8)
+  Line: 123
+    pycodestyle: E501 / line too long (167 > 159 characters) (col 160)
+  Line: 144
+    pylint: dangerous-default-value / Dangerous default value [] as argument (col 4)
+  Line: 147
+    pylint: too-many-locals / Too many local variables (16/15) (col 4)
+  Line: 148
+    pylint: use-dict-literal / Consider using '{}' instead of a call to 'dict'. (col 18)
+  Line: 154
+    pylint: redefined-builtin / Redefining built-in 'id' (col 32)
+  Line: 176
+    pylint: trailing-newlines / Trailing newlines
+
+core/nlp_pipeline/edit_errant.py
+  Line: 8
+    pylint: redefined-builtin / Redefining built-in 'type' (col 40)
+  Line: 46
+    pylint: redefined-builtin / Redefining built-in 'id' (col 20)
+  Line: 55
+    pylint: redefined-builtin / Redefining built-in 'type' (col 8)
+
+core/nlp_pipeline/reduce_context.py
+  Line: 2
+    pylint: import-error / Unable to import 'numpy'
+  Line: 29
+    pycodestyle: E741 / ambiguous variable name 'l' (col 36)
+  Line: 53
+    pycodestyle: E275 / missing whitespace after keyword (col 18)
+
+core/nlp_pipeline/spacy_wrapper.py
+  Line: 1
+    pylint: import-error / Unable to import 'spacy'
+  Line: 58
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 11)
+
+core/reading_analysis/macro_reading_session.py
+  Line: 15
+    pylint: unused-import / Unused UserActivityData imported from zeeguu.core.model
+  Line: 18
+    pylint: useless-object-inheritance / Class 'MacroSession' inherits from object, can be safely removed from bases in python3
+
+core/sql/queries/query_loader.py
+  Line: 8
+    pylint: unspecified-encoding / Using open without explicitly specifying an encoding (col 9)
+
+core/sql/query_building.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 19
+    pylint: protected-access / Access to a protected member _mapping of a client class (col 27)
+
+core/test/mocking_the_web.py
+  Line: 17
+    pycodestyle: E501 / line too long (164 > 159 characters) (col 160)
+  Line: 35
+    pycodestyle: E501 / line too long (165 > 159 characters) (col 160)
+  Line: 43
+    pycodestyle: E501 / line too long (212 > 159 characters) (col 160)
+  Line: 85
+    pylint: consider-using-with / Consider using 'with' for resource-allocating operations (col 12)
+  Line: 91
+    pylint: consider-iterating-dictionary / Consider iterating the dictionary directly instead of calling .keys() (col 16)
+
+core/test/model_test_mixin.py
+  Line: 4
+    pylint: import-error / Unable to import 'requests_mock'
+  Line: 6
+    pylint: import-error / Unable to import 'faker'
+  Line: 19
+    pylint: super-with-arguments / Consider using Python 3 style super() without arguments (col 8)
+  Line: 25
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.db) (col 8)
+  Line: 41
+    pylint: super-with-arguments / Consider using Python 3 style super() without arguments (col 16)
+
+core/test/rules/article_rule.py
+  Line: 30
+    pylint: arguments-differ / Variadics removed in overriding 'ArticleRule._create_model_object' method (col 4)
+
+core/test/rules/base_rule.py
+  Line: 1
+    pylint: import-error / Unable to import 'faker'
+  Line: 2
+    pylint: import-error / Unable to import 'sqlalchemy.exc'
+  Line: 4
+    pylint: unused-import / Unused import zeeguu.core.model
+  Line: 25
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.model.db) (col 4)
+
+core/test/rules/bookmark_rule.py
+  Line: 3
+    pylint: unused-import / Unused timedelta imported from datetime
+  Line: 5
+    pylint: unused-import / Unused quality_bookmark imported from zeeguu.core.bookmark_quality
+  Line: 27
+    pylint: arguments-differ / Number of parameters was 2 in 'BaseRule._create_model_object' and is now 4 in overriding 'BookmarkRule._create_model_object' method (col 4)
+    pylint: arguments-differ / Variadics removed in overriding 'BookmarkRule._create_model_object' method (col 4)
+    pylint: too-many-locals / Too many local variables (17/15) (col 4)
+  Line: 47
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.test.rules.text_rule.TextRule) (col 12)
+  Line: 70
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.test.rules.article_rule.ArticleRule) (col 12)
+  Line: 72
+    pylint: unused-variable / Unused variable 'random_article' (col 12)
+  Line: 95
+    pylint: unused-private-member / Unused private member `BookmarkRule.__get_random_word_from_sentence(sentence)` (col 4)
+
+core/test/rules/exercise_rule.py
+  Line: 22
+    pylint: arguments-differ / Number of parameters was 2 in 'BaseRule._create_model_object' and is now 2 in overriding 'ExerciseRule._create_model_object' method (col 4)
+    pylint: arguments-differ / Variadics removed in overriding 'ExerciseRule._create_model_object' method (col 4)
+  Line: 31
+    pylint: no-value-for-parameter / No value for argument 'session_id' in method call (col 19)
+
+core/test/rules/exercise_session_rule.py
+  Line: 1
+    pylint: unused-import / Unused import random
+  Line: 21
+    pylint: arguments-differ / Number of parameters was 2 in 'BaseRule._create_model_object' and is now 2 in overriding 'ExerciseSessionRule._create_model_object' method (col 4)
+    pylint: arguments-differ / Variadics removed in overriding 'ExerciseSessionRule._create_model_object' method (col 4)
+
+core/test/rules/feed_rule.py
+  Line: 77
+    pylint: arguments-differ / Variadics removed in overriding 'FeedRule._create_model_object' method (col 4)
+
+core/test/rules/language_rule.py
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy.exc'
+  Line: 4
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+
+core/test/rules/outcome_rule.py
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+
+core/test/rules/source_rule.py
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 5
+    pylint: unused-import / Unused import zeeguu.core
+
+core/test/rules/text_rule.py
+  Line: 4
+    pylint: unused-import / Unused UrlRule imported from zeeguu.core.test.rules.url_rule
+  Line: 21
+    pylint: arguments-differ / Number of parameters was 2 in 'BaseRule._create_model_object' and is now 2 in overriding 'TextRule._create_model_object' method (col 4)
+    pylint: arguments-differ / Variadics removed in overriding 'TextRule._create_model_object' method (col 4)
+
+core/test/rules/url_rule.py
+  Line: 19
+    pylint: arguments-differ / Variadics removed in overriding 'UrlRule._create_model_object' method (col 4)
+
+core/test/rules/user_article_rule.py
+  Line: 1
+    pylint: unused-import / Unused datetime imported from datetime
+  Line: 2
+    pylint: unused-import / Unused randint imported from random
+  Line: 6
+    pylint: unused-import / Unused LanguageRule imported from zeeguu.core.test.rules.language_rule
+  Line: 7
+    pylint: unused-import / Unused FeedRule imported from zeeguu.core.test.rules.feed_rule
+  Line: 8
+    pylint: unused-import / Unused UrlRule imported from zeeguu.core.test.rules.url_rule
+  Line: 10
+    pylint: unused-import / Unused Article imported from zeeguu.core.model
+  Line: 28
+    pylint: arguments-differ / Variadics removed in overriding 'UserArticleRule._create_model_object' method (col 4)
+
+core/test/rules/user_exercise_session_rule.py
+  Line: 21
+    pylint: arguments-differ / Variadics removed in overriding 'ExerciseSessionRule._create_model_object' method (col 4)
+
+core/test/rules/user_reading_session_rule.py
+  Line: 23
+    pylint: arguments-differ / Variadics removed in overriding 'ReadingSessionRule._create_model_object' method (col 4)
+
+core/test/rules/user_rule.py
+  Line: 21
+    pylint: arguments-differ / Variadics removed in overriding 'UserRule._create_model_object' method (col 4)
+  Line: 54
+    pylint: unused-variable / Unused variable 'i' (col 16)
+  Line: 55
+    pylint: no-value-for-parameter / No value for argument 'session' in constructor call (col 34)
+
+core/test/rules/user_word_rule.py
+  Line: 20
+    pylint: arguments-differ / Variadics removed in overriding 'UserWordRule._create_model_object' method (col 4)
+
+core/test/test_cohort.py
+  Line: 8
+    pylint: unused-import / Unused TeacherCohortMap imported from zeeguu.core.model.teacher_cohort_map
+
+core/test/test_domain.py
+  Line: 4
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+  Line: 12
+    pylint: unused-import / Unused db imported from zeeguu.core.model
+
+core/test/test_language.py
+  Line: 4
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+
+core/test/test_localized_topic.py
+  Line: 4
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+    pylint: unused-import / Unused NoResultFound imported from sqlalchemy.orm.exc
+  Line: 6
+    pylint: unused-import / Unused Article imported from zeeguu.core.model
+  Line: 9
+    pylint: unused-import / Unused LanguageRule imported from zeeguu.core.test.rules.language_rule
+  Line: 10
+    pylint: unused-import / Unused UrlRule imported from zeeguu.core.test.rules.url_rule
+  Line: 12
+    pylint: unused-import / Unused Language imported from zeeguu.core.model.language
+
+core/test/test_retrieve_and_compute.py
+  Line: 1
+    pylint: import-error / Unable to import 'newspaper'
+  Line: 13
+    pylint: unused-wildcard-import / Unused imports from wildcard import: (s)
+  Line: 48
+    pyflakes: F405 / 'URL_PROPUBLICA_INVESTING' may be undefined, or defined from star imports: zeeguu.core.test.mocking_the_web (col 33)
+  Line: 55
+    pyflakes: F405 / 'URL_NEWSCIENTIST_FISH' may be undefined, or defined from star imports: zeeguu.core.test.mocking_the_web (col 33)
+  Line: 63
+    pyflakes: F405 / 'URL_LEMONDE_VOLS_AMERICAINS' may be undefined, or defined from star imports: zeeguu.core.test.mocking_the_web (col 33)
+  Line: 71
+    pyflakes: F405 / 'URL_ONION_US_MILITARY' may be undefined, or defined from star imports: zeeguu.core.test.mocking_the_web (col 33)
+  Line: 79
+    pyflakes: F405 / 'mock_readability_call' may be undefined, or defined from star imports: zeeguu.core.test.mocking_the_web (col 22)
+    pyflakes: F405 / 'URL_ML_JP_PAYWALL' may be undefined, or defined from star imports: zeeguu.core.test.mocking_the_web (col 44)
+
+core/test/test_url.py
+  Line: 45
+    pylint: unused-variable / Unused variable 'url' (col 12)
+  Line: 49
+    pylint: unused-variable / Unused variable 'i' (col 12)
+
+core/test/test_user.py
+  Line: 47
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 11)
+  Line: 81
+    pylint: use-a-generator / Use a generator instead 'all(b in bookmarks_retrieved for b in random_bookmarks)' (col 15)
+  Line: 102
+    pylint: unused-variable / Unused variable 'result_dates_sorted' (col 26)
+  Line: 109
+    pylint: unused-variable / Unused variable 'i' (col 12)
+
+core/test/test_user_article.py
+  Line: 6
+    pylint: unused-import / Unused ArticleRule imported from zeeguu.core.test.rules.article_rule
+  Line: 7
+    pylint: unused-import / Unused LanguageRule imported from zeeguu.core.test.rules.language_rule
+  Line: 9
+    pylint: unused-import / Unused UserRule imported from zeeguu.core.test.rules.user_rule
+  Line: 10
+    pylint: unused-import / Unused Topic imported from zeeguu.core.model
+
+core/test/test_user_preferences.py
+  Line: 42
+    pylint: unused-variable / Unused variable 'p' (col 8)
+
+core/test/test_user_word.py
+  Line: 3
+    pylint: import-error / Unable to import 'wordstats.loading_from_hermit'
+  Line: 13
+    pylint: useless-parent-delegation / Useless parent or super() delegation in method 'setUp' (col 4)
+  Line: 48
+    pylint: use-a-generator / Use a generator instead 'all(word in list_retrieved for word in list_random_user_words)' (col 15)
+
+core/user_activity_hooks/article_interaction_hooks.py
+  Line: 3
+    pylint: unused-import / Unused EVENT_LIKE_ARTICLE imported from zeeguu.core.constants
+  Line: 33
+    pylint: pointless-string-statement / String statement has no effect (col 4)
+  Line: 38
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.emailer.user_activity.send_notification_article_feedback) (col 4)
+  Line: 58
+    pylint: condition-evals-to-constant / Boolean condition ''broken' or 'not_finished_for_broken' or 'not_finished_for_incomplete' or 'not_finished_for_other' in event_value' will always evaluate to ''broken'' (col 8)
+  Line: 77
+    pylint: import-outside-toplevel / Import outside toplevel (zeeguu.core.emailer.user_activity.send_notification_article_feedback) (col 4)
+
+core/user_statistics/activity.py
+  Line: 1
+    pylint: unused-import / Unused import json
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 27
+    pylint: protected-access / Access to a protected member _mapping of a client class (col 21)
+  Line: 28
+    pylint: protected-access / Access to a protected member _mapping of a client class (col 28)
+
+core/user_statistics/exercise_corectness.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 3
+    pylint: unused-import / Unused import zeeguu.core
+
+core/user_statistics/exercise_sessions.py
+  Line: 1
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 3
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 8
+    pylint: unused-argument / Unused argument 'cohort_id' (col 45)
+
+core/user_statistics/reading_sessions.py
+  Line: None
+    pycodestyle: E101 / indentation contains mixed spaces and tabs (col 9)
+  Line: 3
+    pylint: import-error / Unable to import 'sqlalchemy'
+  Line: 5
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 11
+    pycodestyle: E741 / ambiguous variable name 'l' (col 15)
+  Line: 40
+    pylint: pointless-string-statement / String statement has no effect
+  Line: 95
+    pylint: protected-access / Access to a protected member _mapping of a client class (col 23)
+  Line: 104
+    pylint: pointless-string-statement / String statement has no effect
+  Line: 150
+    pylint: protected-access / Access to a protected member _mapping of a client class (col 23)
+
+core/user_statistics/student_overview.py
+  Line: 1
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 11
+    pylint: unused-import / Unused db imported from zeeguu.core.model
+
+core/util/__init__.py
+  Line: 4
+    pyflakes: F401 / 'zeeguu.core.util.encoding.JSONSerializable' imported but unused (col 1)
+  Line: 5
+    pyflakes: F401 / 'zeeguu.core.util.hash.text_hash' imported but unused (col 1)
+  Line: 6
+    pyflakes: F401 / 'zeeguu.core.util.time.get_server_time_utc' imported but unused (col 1)
+
+core/util/encoding.py
+  Line: 4
+    pylint: import-error / Unable to import 'flask'
+  Line: 9
+    pylint: useless-object-inheritance / Class 'JSONSerializable' inherits from object, can be safely removed from bases in python3
+
+core/util/hash.py
+  Line: 22
+    pylint: unused-variable / Unused variable 'i' (col 8)
+
+core/util/text.py
+  Line: 3
+    pylint: import-error / Unable to import 'nltk'
+  Line: 4
+    pylint: import-error / Unable to import 'pyphen'
+  Line: 5
+    pylint: import-error / Unable to import 'regex'
+  Line: 7
+    pylint: import-error / Unable to import 'nltk'
+  Line: 24
+    pylint: consider-using-set-comprehension / Consider using a set comprehension (col 11)
+  Line: 68
+    pylint: trailing-newlines / Trailing newlines
+
+core/util/timer_logging_decorator.py
+  Line: 3
+    pylint: unused-import / Unused import zeeguu.core
+  Line: 14
+    pylint: consider-using-f-string / Formatting a regular string which could be a f-string (col 35)
+
+core/word_scheduling/adaptive/scheduling_algo.py
+  Line: 1
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model.article -> zeeguu.core.model.user)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model.article -> zeeguu.core.model.user_article -> zeeguu.core.model.personal_copy)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model.cohort -> zeeguu.core.model.user)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model.bookmark -> zeeguu.core.model.exercise)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.bookmark_quality -> zeeguu.core.bookmark_quality.top_bookmarks_for_user)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model.cohort -> zeeguu.core.model.teacher_cohort_map)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.word_scheduling.basicSR.basicSR)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.speech)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model.personal_copy -> zeeguu.core.model.user -> zeeguu.core.model.user_article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.elastic.indexing -> zeeguu.core.model.article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.language.difficulty_estimator_factory -> zeeguu.core.language.strategies.default_difficulty_estimator -> zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.language.difficulty_estimator_factory -> zeeguu.core.language.strategies.default_difficulty_estimator -> zeeguu.core.language.difficulty_estimator_strategy -> zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.language.difficulty_estimator_factory -> zeeguu.core.language.strategies.flesch_kincaid_difficulty_estimator -> zeeguu.core.language.difficulty_estimator_strategy -> zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.bookmark_quality -> zeeguu.core.bookmark_quality.positive_qualities -> zeeguu.core.bookmark_quality.negative_qualities -> zeeguu.core.model.bookmark -> zeeguu.core.bookmark_quality.fit_for_study)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.language.difficulty_estimator_factory -> zeeguu.core.language.strategies.default_difficulty_estimator -> zeeguu.core.model -> zeeguu.core.model.cohort_article_map -> zeeguu.core.model.article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.user_language)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.word_to_study)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.exercise -> zeeguu.core.model.bookmark -> zeeguu.core.model.user -> zeeguu.core.model.cohort -> zeeguu.core.model.teacher_cohort_map)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.user_article -> zeeguu.core.model.personal_copy -> zeeguu.core.model.article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model.bookmark -> zeeguu.core.model.exercise -> zeeguu.core.model.user_exercise_session -> zeeguu.core.model.user)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.user_article -> zeeguu.core.model.article_difficulty_feedback)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.elastic.indexing -> zeeguu.core.model.difficulty_lingo_rank -> zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.user_article)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.exercise -> zeeguu.core.model.exercise_outcome)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.cohort_article_map)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.session)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.search_filter)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.feed)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.user_preference)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.user_activitiy_data)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.user_reading_session)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.text)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.text)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.search_subscription)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.feed -> zeeguu.core.model.url)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.text -> zeeguu.core.model.user_word)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.exercise)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.feed -> zeeguu.core.model.language)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.topic)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.exercise -> zeeguu.core.model.user_exercise_session)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.search_subscription -> zeeguu.core.model.search)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.topic_subscription)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.exercise -> zeeguu.core.model.exercise_source)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.article -> zeeguu.core.model.feed -> zeeguu.core.model.url -> zeeguu.core.model.domain_name)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.topic_filter)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.unique_code)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.localized_topic)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.bookmark_quality -> zeeguu.core.bookmark_quality.top_bookmarks_for_user -> zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.bookmark_quality.fit_for_study)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.bookmark_quality -> zeeguu.core.bookmark_quality.negative_qualities -> zeeguu.core.model.bookmark -> zeeguu.core.bookmark_quality.fit_for_study)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.sql.query_building)
+    pylint: cyclic-import / Cyclic import (zeeguu.core.model -> zeeguu.core.model.teacher -> zeeguu.core.model.teacher_cohort_map -> zeeguu.core.model.cohort -> zeeguu.core.model.user -> zeeguu.core.model.bookmark -> zeeguu.core.model.exercise -> zeeguu.core.model.user_exercise_session -> zeeguu.core.sql.learner.exercises_history -> zeeguu.core.sql.query_building)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.user_articles)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.user)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.user_preferences)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.exercise_sessions)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.sessions)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.own_texts)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.reading_sessions)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.accounts)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.user_article)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.feature_toggles)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.nlp)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.topics)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.user_statistics)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.translation)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.user_languages)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.system_languages)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.search)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.student)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.activity_tracking)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.exercises)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.bookmarks_and_words)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.article)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.teacher_dashboard -> zeeguu.api.endpoints.teacher_dashboard.cohorts)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.teacher_dashboard -> zeeguu.api.endpoints.teacher_dashboard.student_readings)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.teacher_dashboard -> zeeguu.api.endpoints.teacher_dashboard.student_overviews)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.teacher_dashboard -> zeeguu.api.endpoints.teacher_dashboard.article_management)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.teacher_dashboard -> zeeguu.api.endpoints.teacher_dashboard.student_exercises)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.teacher_dashboard -> zeeguu.api.endpoints.teacher_dashboard.student)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.teacher_dashboard -> zeeguu.api.endpoints.teacher_dashboard.student_words)
+    pylint: cyclic-import / Cyclic import (zeeguu.api.endpoints -> zeeguu.api.endpoints.teacher_dashboard -> zeeguu.api.endpoints.teacher_dashboard.general)
+  Line: 10
+    pylint: pointless-string-statement / String statement has no effect
+  Line: 12
+    pylint: pointless-string-statement / String statement has no effect
+  Line: 20
+    pycodestyle: E116 / unexpected indentation (comment) (col 5)
+  Line: 21
+    pycodestyle: E116 / unexpected indentation (comment) (col 5)
+  Line: 22
+    pycodestyle: E116 / unexpected indentation (comment) (col 5)
+  Line: 23
+    pycodestyle: E116 / unexpected indentation (comment) (col 5)
+  Line: 24
+    pycodestyle: E116 / unexpected indentation (comment) (col 5)
+  Line: 25
+    pycodestyle: E116 / unexpected indentation (comment) (col 5)
+  Line: 26
+    pycodestyle: E116 / unexpected indentation (comment) (col 5)
+  Line: 27
+    pycodestyle: E116 / unexpected indentation (comment) (col 5)
+  Line: 28
+    pycodestyle: E116 / unexpected indentation (comment) (col 5)
+  Line: 29
+    pycodestyle: E116 / unexpected indentation (comment) (col 5)
+  Line: 32
+    pylint: pointless-string-statement / String statement has no effect
+  Line: 42
+    pylint: pointless-string-statement / String statement has no effect
+  Line: 62
+    pylint: wrong-import-position / Import "from datetime import datetime, timedelta" should be placed at the top of the module
+  Line: 64
+    pylint: import-error / Unable to import 'numpy'
+    pylint: wrong-import-position / Import "from numpy import number" should be placed at the top of the module
+    pylint: unused-import / Unused number imported from numpy
+  Line: 65
+    pylint: wrong-import-position / Import "from zeeguu.core.model.word_to_study import WordToStudy" should be placed at the top of the module
+  Line: 66
+    pylint: wrong-import-position / Import "from zeeguu.core.model import Bookmark, UserWord" should be placed at the top of the module
+  Line: 67
+    pylint: import-error / Unable to import 'sqlalchemy.orm.exc'
+    pylint: wrong-import-position / Import "from sqlalchemy.orm.exc import NoResultFound" should be placed at the top of the module
+  Line: 68
+    pylint: import-error / Unable to import 'sqlalchemy.sql'
+    pylint: wrong-import-position / Import "from sqlalchemy.sql import exists" should be placed at the top of the module
+  Line: 69
+    pylint: import-error / Unable to import 'sqlalchemy.sql.expression'
+    pylint: wrong-import-position / Import "from sqlalchemy.sql.expression import func" should be placed at the top of the module
+  Line: 119
+    pycodestyle: E712 / comparison to True should be 'if cond is True:' or 'if cond:' (col 60)
+    pylint: singleton-comparison / Comparison 'Bookmark.fit_for_study == True' should be 'Bookmark.fit_for_study is True' if checking for the singleton value True, or 'bool(Bookmark.fit_for_study)' if testing for truthiness (col 37)
+  Line: 187
+    pylint: trailing-newlines / Trailing newlines
+
+core/word_scheduling/basicSR/basicSR.py
+  Line: 3
+    pylint: reimported / Reimport 'Bookmark' (imported line 1)
+    pyflakes: F811 / redefinition of unused 'Bookmark' from line 1 (col 1)
+  Line: 69
+    pylint: no-else-return / Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (col 16)
+  Line: 165
+    pylint: broad-exception-raised / Raising too general exception: Exception (col 12)
+  Line: 235
+    pylint: unnecessary-lambda / Lambda may not be necessary (col 42)
+
+core/word_stats/__init__.py
+  Line: 1
+    pylint: import-error / Unable to import 'wordstats'
+
+
+
+Check Information
+=================
+         Started: 2024-05-06 22:51:31.369570
+        Finished: 2024-05-06 22:51:46.152419
+      Time Taken: 14.78 seconds
+       Formatter: grouped
+        Profiles: default, no_doc_warnings, no_test_warnings, strictness_medium, strictness_high, strictness_veryhigh, no_member_warnings
+      Strictness: None
+  Libraries Used: flask
+       Tools Run: dodgy, mccabe, profile-validator, pycodestyle, pyflakes, pylint
+  Messages Found: 1427
+
