@@ -12,7 +12,7 @@ I will do so by examining the implementation and reconstructing the as-implement
 
 ## Content
 
-This repository will only consist of the scripts that I used for the reconstruction, as well as my time allocation in the project.
+This repository will only consist of the scripts that I used for the reconstruction.
 
 ## Notebooks for Inspiration
 
